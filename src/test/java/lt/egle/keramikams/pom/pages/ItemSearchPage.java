@@ -25,4 +25,8 @@ public class ItemSearchPage {
     public static String getNameFirstGivenItem() {
         return Common.getElementText(Locator.ItemSearch.textFirstItemGiven);
     }
+
+    public static String readMessageNotice() {
+        return Common.getElementText(Locator.ItemSearch.textMessageNotice);
+    }
 }

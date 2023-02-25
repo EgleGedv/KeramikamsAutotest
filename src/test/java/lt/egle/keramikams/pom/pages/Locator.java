@@ -25,6 +25,7 @@ public class Locator {
         public static By inputSearch = By.xpath("//input[@id='search']");
         public static By iconSearch = By.xpath("//button[@class='action search']");
         public static By textFirstItemGiven = By.xpath("//a[contains(text(), 'Raudona riebi molio masė')]");
+        public static By textMessageNotice = By.xpath("//div[@class='message notice']");
     }
 }
 
