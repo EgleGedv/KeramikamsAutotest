@@ -38,4 +38,8 @@ public class LoginPage {
     public static String readFirstLineDropdownNuorodos() {
         return Common.getElementText(Locator.Login.firstLineDropdownNuorodos);
     }
+
+    public static String readErrorMessage() {
+        return Common.getElementText(Locator.Login.errorMessage);
+    }
 }
