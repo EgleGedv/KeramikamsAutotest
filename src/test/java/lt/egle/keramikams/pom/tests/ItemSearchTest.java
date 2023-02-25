@@ -2,7 +2,6 @@ package lt.egle.keramikams.pom.tests;
 
 import lt.egle.keramikams.pom.pages.ItemSearchPage;
 import lt.egle.keramikams.pom.tests.common.BaseTest;
-import org.openqa.selenium.devtools.v85.domstorage.model.Item;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
