@@ -27,5 +27,14 @@ public class Locator {
         public static By textFirstItemGiven = By.xpath("//a[contains(text(), 'Raudona riebi molio masė')]");
         public static By textMessageNotice = By.xpath("//div[@class='message notice']");
     }
+
+    public class AddToCart {
+
+        public static By buttonIKrepseliRaudonaRiebiMolioMase = By.xpath("//form[@action='https://keramikams.lt/checkout/cart/add/uenc/aHR0cHM6Ly9rZXJhbWlrYW1zLmx0L2NhdGFsb2dzZWFyY2gvcmVzdWx0Lz9xPVJhdWRvbmErcmllYmkrbW9saW8rbWFzJUM0JTk3Kw%2C%2C/product/5551/']");
+        public static By fieldQuantity20Kg = By.xpath("//input[@name='super_group[2180]']");
+        public static By fieldQuantity5Kg = By.xpath("//input[@name='super_group[2183]']");
+        public static By buttonIKrepseli = By.xpath("//span[contains(text(), 'Į krepšelį')]");
+        public static By numberofItemsinBasket = By.xpath("//span[@class='counter-number']");
+    }
 }
 
