@@ -12,11 +12,11 @@ public class LoginPage {
     }
 
     public static void acceptCookies() {
-        Common.clickElement(Locator.Login.buttonSutinku);
+        Common.clickElement(Locator.CommonActions.buttonCookiesSutinku);
     }
 
     public static void clickOnNuorodos() {
-        Common.clickElement(Locator.Login.buttonNuorodos);
+        Common.clickElement(Locator.CommonActions.buttonNuorodos);
     }
 
     public static void clickOnPrisijungti() {

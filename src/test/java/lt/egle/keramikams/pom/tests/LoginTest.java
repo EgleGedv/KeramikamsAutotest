@@ -1,6 +1,5 @@
 package lt.egle.keramikams.pom.tests;
 
-import lt.egle.keramikams.pom.pages.Locator;
 import lt.egle.keramikams.pom.pages.LoginPage;
 import lt.egle.keramikams.pom.tests.common.BaseTest;
 import org.testng.Assert;
@@ -42,7 +41,7 @@ public class LoginTest extends BaseTest {
     }
 
     @Test
-    public void testNegativeLogin(){
+    public void testNegativeLogin() {
 
         String expectedResult = "Neteisingas";
         String actualResult;
@@ -59,6 +58,7 @@ public class LoginTest extends BaseTest {
 
         actualResult = LoginPage.readErrorMessage();
 
-        Assert.assertTrue(actualResult.contains(expectedResult));
+        Assert.assertTrue(actualResult.contains(expectedResult),
+                String.format("Expected result: %s, Actual result: %s", expectedResult, actualResult));
     }
 }
