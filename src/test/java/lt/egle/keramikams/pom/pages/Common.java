@@ -87,4 +87,19 @@ public class Common {
         Driver.getDriver().switchTo().alert().dismiss();
     }
 
+    public static List<Double> getPricesBeforeFilter(By locator) {
+
+        List<WebElement> beforeFilterPrice = getPrices(locator);
+        List <Double> beforeFilterPriceList = new ArrayList<>();
+
+        for(WebElement p : beforeFilterPrice) {
+            beforeFilterPriceList.add(
+                    Double.valueOf(p.getText().replace("€", "")));
+        }
+        return beforeFilterPriceList;
+    }
+
+    private static List<WebElement> getPrices(By locator) {
+        return Driver.getDriver().findElements(locator);
+    }
 }

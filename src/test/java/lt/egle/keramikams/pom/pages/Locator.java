@@ -36,5 +36,9 @@ public class Locator {
         public static By buttonIKrepseli = By.xpath("//span[contains(text(), 'Į krepšelį')]");
         public static By numberofItemsinBasket = By.xpath("//span[@class='counter-number']");
     }
+
+    public class ItemFilter {
+        public static By spanPrice = By.xpath("//span[@class='price']");
+    }
 }
 
