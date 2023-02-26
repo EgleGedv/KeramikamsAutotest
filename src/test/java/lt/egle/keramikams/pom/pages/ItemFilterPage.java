@@ -16,6 +16,10 @@ public class ItemFilterPage {
 
 
     public static void capturePricesBeforeFilter() {
-        Common.getPricesBeforeFilter(Locator.ItemFilter.spanPrice);
+        Common.getPricesBeforeFilter(Locator.ItemFilter.spanKaina);
+    }
+
+    public static void chooseSortByPrice() {
+        Common.selectOptionByValue(Locator.ItemFilter.buttonRikiavimas, "price");
     }
 }

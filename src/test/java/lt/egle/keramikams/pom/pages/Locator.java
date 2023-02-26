@@ -38,7 +38,8 @@ public class Locator {
     }
 
     public class ItemFilter {
-        public static By spanPrice = By.xpath("//span[@class='price']");
+        public static By spanKaina = By.xpath("//span[@class='price']");
+        public static By buttonRikiavimas = By.xpath("(//select[@id='sorter'])[1]");
     }
 }
 
