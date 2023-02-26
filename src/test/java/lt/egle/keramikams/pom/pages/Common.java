@@ -90,13 +90,20 @@ public class Common {
     public static List<Double> getPricesBeforeFilter(By locator) {
 
         List<WebElement> beforeFilterPrice = getPrices(locator);
-        List <Double> beforeFilterPriceList = new ArrayList<>();
+        List<String> beforeFilterPriceList = new ArrayList<>();
 
-        for(WebElement p : beforeFilterPrice) {
+        for (WebElement p : beforeFilterPrice) {
             beforeFilterPriceList.add(
-                    Double.valueOf(p.getText().replace("€", "")));
+                    (p.getText().replace("€", " ")));
         }
-        return beforeFilterPriceList;
+
+        List<Double> beforeFilterPriceListDouble = new ArrayList<>();
+        for (String x : beforeFilterPriceList) {
+            beforeFilterPriceListDouble.add(Double.parseDouble(x.replace(",", ".")));
+        }
+
+
+        return beforeFilterPriceListDouble;
     }
 
     private static List<WebElement> getPrices(By locator) {
