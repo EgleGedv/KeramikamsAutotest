@@ -87,23 +87,21 @@ public class Common {
         Driver.getDriver().switchTo().alert().dismiss();
     }
 
-    public static List<Double> getPricesBeforeFilter(By locator) {
+    public static List<Double> getListPrices(By locator) {
 
-        List<WebElement> beforeFilterPrice = getPrices(locator);
-        List<String> beforeFilterPriceList = new ArrayList<>();
+        List<WebElement> filterPrice = getPrices(locator);
+        List<String> filterPriceList = new ArrayList<>();
 
-        for (WebElement p : beforeFilterPrice) {
-            beforeFilterPriceList.add(
+        for (WebElement p : filterPrice) {
+            filterPriceList.add(
                     (p.getText().replace("€", " ")));
         }
 
-        List<Double> beforeFilterPriceListDouble = new ArrayList<>();
-        for (String x : beforeFilterPriceList) {
-            beforeFilterPriceListDouble.add(Double.parseDouble(x.replace(",", ".")));
+        List<Double> filterPriceListDouble = new ArrayList<>();
+        for (String x : filterPriceList) {
+            filterPriceListDouble.add(Double.parseDouble(x.replace(",", ".")));
         }
-
-
-        return beforeFilterPriceListDouble;
+        return filterPriceListDouble;
     }
 
     private static List<WebElement> getPrices(By locator) {

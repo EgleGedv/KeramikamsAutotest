@@ -1,26 +1,20 @@
 package lt.egle.keramikams.pom.pages;
 
-import lt.egle.keramikams.pom.utils.Driver;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-
-import java.util.ArrayList;
 import java.util.List;
 
-public class ItemFilterPage {
+public class SortItemsPage {
 
     public static void open() {
         Common.openUrl("https://keramikams.lt/prekiu-katalogas/molio-mases/porcelianas");
     }
 
     public static void sleep() {
-        Common.sleep(5000);
+        Common.sleep(3000);
     }
 
     public static void acceptCookies() {
         Common.clickElement(Locator.CommonActions.buttonCookiesSutinku);
     }
-
 
     public static void chooseSortByPrice() {
         Common.selectOptionByValue(Locator.ItemFilter.buttonRikiavimas, "price");
@@ -31,8 +25,11 @@ public class ItemFilterPage {
     }
 
     public static List<Double> getPricesBeforeFilter() {
-        return Common.getPricesBeforeFilter(Locator.ItemFilter.filterPrice);
+        return Common.getListPrices(Locator.ItemFilter.filterPrice);
+
     }
 
-
+    public static List<Double> getPricesAfterFilter() {
+        return Common.getListPrices(Locator.ItemFilter.filterPrice);
+    }
 }

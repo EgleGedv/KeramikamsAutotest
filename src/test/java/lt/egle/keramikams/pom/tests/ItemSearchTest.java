@@ -50,9 +50,5 @@ public class ItemSearchTest extends BaseTest {
 
         Assert.assertTrue(actualResult.contains(expectedResult),
                 String.format("Expected result: %s, Actual result: %s", expectedResult, actualResult));
-
     }
-
-
-    
 }
