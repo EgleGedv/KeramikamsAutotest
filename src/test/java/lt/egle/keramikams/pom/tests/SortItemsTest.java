@@ -26,6 +26,7 @@ public class SortItemsTest extends BaseTest {
         SortItemsPage.acceptCookies();
 
         List<Double> expectedResult = new ArrayList<>(SortItemsPage.getPricesBeforeFilter());
+        Collections.sort(expectedResult, Collections.reverseOrder());
 
         SortItemsPage.sleep();
         SortItemsPage.chooseSortByPrice();
@@ -34,8 +35,6 @@ public class SortItemsTest extends BaseTest {
         SortItemsPage.sleep();
 
         List<Double> actualResult = new ArrayList<>(SortItemsPage.getPricesAfterFilter());
-
-        Collections.sort(expectedResult, Collections.reverseOrder());
 
         System.out.println(actualResult);
         System.out.println(expectedResult);
