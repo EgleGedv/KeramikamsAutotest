@@ -8,6 +8,8 @@ import org.testng.annotations.Test;
 
 public class LoginTest extends BaseTest {
 
+    // LoginPositive fails when running with testng because of reCaptcha, please run it separately
+
     @BeforeMethod
     @Override
     public void setup() {
