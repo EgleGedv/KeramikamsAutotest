@@ -21,10 +21,10 @@ public class ItemSearchTest extends BaseTest {
         String actualResult;
         String searchKeyword = "Raudona riebi molio mase";
 
-        ItemSearchPage.sleep();
+        ItemSearchPage.sleep(5000);
         ItemSearchPage.acceptCookies();
         ItemSearchPage.typeItemToSearchFor(searchKeyword);
-        ItemSearchPage.sleep();
+        ItemSearchPage.sleep(5000);
         ItemSearchPage.clickOnMagnifierToSearch();
 
         actualResult = ItemSearchPage.getNameFirstGivenItem();
@@ -40,10 +40,10 @@ public class ItemSearchTest extends BaseTest {
         String actualResult;
         String searchKeyword = "Rauuuu";
 
-        ItemSearchPage.sleep();
+        ItemSearchPage.sleep(5000);
         ItemSearchPage.acceptCookies();
         ItemSearchPage.typeItemToSearchFor(searchKeyword);
-        ItemSearchPage.sleep();
+        ItemSearchPage.sleep(5000);
         ItemSearchPage.clickOnMagnifierToSearch();
 
         actualResult = ItemSearchPage.readMessageNotice();

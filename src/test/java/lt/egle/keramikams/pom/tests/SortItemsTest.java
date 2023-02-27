@@ -22,17 +22,17 @@ public class SortItemsTest extends BaseTest {
     @Test
     public void testSortByPriceLowestToHighestItemsPorcelianas() {
 
-        SortItemsPage.sleep();
+        SortItemsPage.sleep(3000);
         SortItemsPage.acceptCookies();
 
         List<Double> expectedResult = new ArrayList<>(SortItemsPage.getPricesBeforeFilter());
         Collections.sort(expectedResult, Collections.reverseOrder());
 
-        SortItemsPage.sleep();
+        SortItemsPage.sleep(3000);
         SortItemsPage.chooseSortByPrice();
-        SortItemsPage.sleep();
+        SortItemsPage.sleep(3000);
         SortItemsPage.setDescendingDirection();
-        SortItemsPage.sleep();
+        SortItemsPage.sleep(3000);
 
         List<Double> actualResult = new ArrayList<>(SortItemsPage.getPricesAfterFilter());
 

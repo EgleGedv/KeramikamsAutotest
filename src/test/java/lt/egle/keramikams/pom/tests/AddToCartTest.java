@@ -27,7 +27,7 @@ public class AddToCartTest extends BaseTest {
         expectedResult = totalItemsInBasket.toString();
         String actualResult;
 
-        AddToCartPage.sleep();
+        AddToCartPage.sleep(3000);
         AddToCartPage.acceptCookies();
         AddToCartPage.clickButtonAddToCart();
         AddToCartPage.selectTextGivenValueQuantity20Kg(Keys.chord(Keys.CONTROL, "a"));
@@ -35,7 +35,7 @@ public class AddToCartTest extends BaseTest {
         AddToCartPage.selectTextGivenValueQuantity5Kg(Keys.chord(Keys.CONTROL, "a"));
         AddToCartPage.typeNewValueQuantity5Kg(quantity5Kg);
         AddToCartPage.clickButtonSubmitAddToCart();
-        AddToCartPage.sleep();
+        AddToCartPage.sleep(3000);
 
         actualResult = AddToCartPage.readValueNumberOfItemsInBasket();
         Assert.assertTrue(actualResult.contains(expectedResult),

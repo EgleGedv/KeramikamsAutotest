@@ -7,8 +7,8 @@ public class LoginPage {
     }
 
 
-    public static void sleep() {
-        Common.sleep(8000);
+    public static void sleep(int millis) {
+        Common.sleep(millis);
     }
 
     public static void acceptCookies() {

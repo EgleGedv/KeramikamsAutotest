@@ -8,8 +8,8 @@ public class SortItemsPage {
         Common.openUrl("https://keramikams.lt/prekiu-katalogas/molio-mases/porcelianas");
     }
 
-    public static void sleep() {
-        Common.sleep(3000);
+    public static void sleep(int millis) {
+        Common.sleep(millis);
     }
 
     public static void acceptCookies() {

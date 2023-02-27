@@ -26,14 +26,14 @@ public class LoginTest extends BaseTest {
         String email = "Cocococonut144@gmail.com";
         String password = "Coconut123";
 
-        LoginPage.sleep();
+        LoginPage.sleep(3000);
         LoginPage.acceptCookies();
         LoginPage.clickOnNuorodos();
         LoginPage.clickOnPrisijungti();
         LoginPage.typeEmail(email);
         LoginPage.typePassword(password);
         LoginPage.clickLogIn();
-        LoginPage.sleep(); //before we can check for the necessary phrase, we need to wait a bit for the login page to load
+        LoginPage.sleep(3000); //before we can check for the necessary phrase, we need to wait a bit for the login page to load
         LoginPage.clickOnNuorodos();
 
         actualResult = LoginPage.readFirstLineDropdownNuorodos();
@@ -50,7 +50,7 @@ public class LoginTest extends BaseTest {
 
         String fakeEmail = "Lalala@msn.com";
         String fakePassword = "Lalala123";
-        LoginPage.sleep();
+        LoginPage.sleep(3000);
         LoginPage.acceptCookies();
         LoginPage.clickOnNuorodos();
         LoginPage.clickOnPrisijungti();

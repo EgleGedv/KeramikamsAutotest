@@ -5,8 +5,8 @@ public class AddToCartPage {
         Common.openUrl("https://keramikams.lt/catalogsearch/result/?q=Raudona+riebi+molio+mas%C4%97+");
     }
 
-    public static void sleep() {
-        Common.sleep(5000);
+    public static void sleep(int millis) {
+        Common.sleep(millis);
     }
 
     public static void acceptCookies() {
