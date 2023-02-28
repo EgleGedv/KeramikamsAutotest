@@ -13,10 +13,12 @@ public class SortItemsPage {
     }
 
     public static void acceptCookies() {
+        Common.waitForElementToBeVisible(Locator.CommonActions.buttonCookiesSutinku);
         Common.clickElement(Locator.CommonActions.buttonCookiesSutinku);
     }
 
     public static void chooseSortByPrice() {
+        Common.waitForElementToBeClickable(Locator.ItemFilter.buttonRikiavimas);
         Common.selectOptionByValue(Locator.ItemFilter.buttonRikiavimas, "price");
     }
 
@@ -30,6 +32,7 @@ public class SortItemsPage {
     }
 
     public static List<Double> getPricesAfterFilter() {
+        Common.waitForElementToBeVisible(Locator.ItemFilter.filterPrice);
         return Common.getListPrices(Locator.ItemFilter.filterPrice);
     }
 }

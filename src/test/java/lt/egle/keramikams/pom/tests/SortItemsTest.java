@@ -16,23 +16,22 @@ public class SortItemsTest extends BaseTest {
     @BeforeMethod
     @Override
     public void setup() {
+
         SortItemsPage.open();
+        SortItemsPage.acceptCookies();
     }
 
     @Test
     public void testSortByPriceLowestToHighestItemsPorcelianas() {
 
-        SortItemsPage.sleep(3000);
-        SortItemsPage.acceptCookies();
-
         List<Double> expectedResult = new ArrayList<>(SortItemsPage.getPricesBeforeFilter());
+
         Collections.sort(expectedResult, Collections.reverseOrder());
 
-        SortItemsPage.sleep(3000);
         SortItemsPage.chooseSortByPrice();
         SortItemsPage.sleep(3000);
         SortItemsPage.setDescendingDirection();
-        SortItemsPage.sleep(3000);
+        SortItemsPage.sleep(3000); //waiting to load new prices, WebDriverWait does not work in this and above cases
 
         List<Double> actualResult = new ArrayList<>(SortItemsPage.getPricesAfterFilter());
 
