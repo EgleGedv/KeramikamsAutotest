@@ -22,12 +22,9 @@ public class Locator {
     }
 
     public static class ItemSearch {
-
-        public static By inputSearch = By.xpath("//input[@id='search']");
-        public static By iconSearch = By.xpath("//button[@class='action search']");
         public static By textFirstItemInList = By.xpath("//*[@id='layer-product-list']/div[2]/ol/li[1]/div/div[2]/strong/a");
         public static By textMessageNotice = By.xpath("//div[@class='message notice']");
-        public static By dropDownKategorijosMolioMases = By.xpath("//*[@id='mpsearch-category']/option[3]");
+
     }
 
     public static class AddToCart {
@@ -45,6 +42,17 @@ public class Locator {
         public static By filterPrice = By.className("price");
         public static By spanSecondItem = By.xpath("(//li[@class='item product product-item nth-child-2n']//a[@href='https://keramikams.lt/limozo-porceliano-mase-liejimui'])[1]");
         public static By spanThirdItem = By.xpath("(//li[@class='item product product-item nth-child-2np1 nth-child-3n']//a[@href='https://keramikams.lt/permatomas-imperatoriskasis-porcelianas-5kg-jade'])[1]");
+    }
+
+    public static class Homepage {
+        public static By iconMagnifier = By.xpath("//button[@class='action search']");
+        public static By inputSearch = By.xpath("//input[@id='search']");
+
+        public static By inputByTextInCategory(String categoryName) {
+            return By.xpath(
+                    String.format("//option[contains(text(), '%s')]", categoryName)
+            );
+        }
     }
 }
 

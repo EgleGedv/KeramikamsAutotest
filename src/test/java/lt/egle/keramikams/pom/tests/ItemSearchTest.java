@@ -20,12 +20,13 @@ public class ItemSearchTest extends BaseTest {
     public void testPositiveUsingSearchField() {
 
         String expectedResult = "ARGILA";
-        String actualResult;
         String searchKeyword = "raudona";
+        String category = "Molio masės";
+        String actualResult;
 
-        ItemSearchPage.typeItemToSearchFor(searchKeyword);
-        ItemSearchPage.selectFromListMolioMases();
-        ItemSearchPage.clickOnMagnifierToSearch();
+        HomePage.typeItemToSearchFor(searchKeyword);
+        HomePage.selectCategoryFromList(category);
+        HomePage.clickOnMagnifierToSearch();
 
         actualResult = ItemSearchPage.getNameFirstGivenItem();
 
@@ -37,12 +38,13 @@ public class ItemSearchTest extends BaseTest {
     public void testNegativeUsingSearchField() {
 
         String expectedResult = "prekių nebuvo rasta";
-        String actualResult;
         String searchKeyword = "Rauuuu";
+        String category = "Molio masės";
+        String actualResult;
 
-        ItemSearchPage.typeItemToSearchFor(searchKeyword);
-        ItemSearchPage.selectFromListMolioMases();
-        ItemSearchPage.clickOnMagnifierToSearch();
+        HomePage.typeItemToSearchFor(searchKeyword);
+        HomePage.selectCategoryFromList(category);
+        HomePage.clickOnMagnifierToSearch();
 
         actualResult = ItemSearchPage.readMessageNotice();
 
