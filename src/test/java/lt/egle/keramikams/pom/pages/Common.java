@@ -4,8 +4,11 @@ import lt.egle.keramikams.pom.utils.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -106,5 +109,10 @@ public class Common {
 
     private static List<WebElement> getPrices(By locator) {
         return Driver.getDriver().findElements(locator);
+    }
+
+    public static void waitForElementToBeVisible(By locator) {
+        WebDriverWait webDriverWait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
+        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 }
