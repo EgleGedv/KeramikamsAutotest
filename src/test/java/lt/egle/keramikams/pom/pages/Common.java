@@ -117,6 +117,11 @@ public class Common {
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator));
     }
 
+    public static void waitForElementToBePresent(By locator) {
+        WebDriverWait webDriverWait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
+        webDriverWait.until(ExpectedConditions.presenceOfElementLocated(locator));
+    }
+
     public static void selectAllText(By locator) {
         getElement(locator).sendKeys(Keys.chord(Keys.CONTROL, "a"));
     }

@@ -13,6 +13,7 @@ public class Locator {
         public static By buttonPrisijungti = By.xpath("(//span[contains(text(),'Prisijungti')])[1]");
         public static By firstLineDropdownNuorodos = By.xpath("(//li[@class='greet welcome'])[1]");
         public static By errorMessage = By.xpath("//div[contains(text(),'Neteisingas prisijungimo vardas arba slaptažodis.')]");
+        public static By spanLoggedIn = By.xpath("(//span[@class='logged-in'])[1]");
     }
 
     public static class CommonActions {

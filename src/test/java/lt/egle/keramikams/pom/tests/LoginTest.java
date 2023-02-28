@@ -1,5 +1,6 @@
 package lt.egle.keramikams.pom.tests;
 
+import lt.egle.keramikams.pom.pages.HomePage;
 import lt.egle.keramikams.pom.pages.LoginPage;
 import lt.egle.keramikams.pom.tests.common.BaseTest;
 import org.testng.Assert;
@@ -13,8 +14,10 @@ public class LoginTest extends BaseTest {
     @BeforeMethod
     @Override
     public void setup() {
-        LoginPage.open();
-        LoginPage.acceptCookies();
+        HomePage.open();
+        HomePage.acceptCookies();
+        HomePage.clickOnNuorodos();
+        HomePage.clickOnPrisijungti();
     }
 
     @Test
@@ -27,8 +30,6 @@ public class LoginTest extends BaseTest {
         String email = "Cocococonut144@gmail.com";
         String password = "Coconut123";
 
-        LoginPage.clickOnNuorodos();
-        LoginPage.clickOnPrisijungti();
         LoginPage.typeEmail(email);
         LoginPage.typePassword(password);
         LoginPage.clickLogIn();
@@ -48,8 +49,7 @@ public class LoginTest extends BaseTest {
 
         String fakeEmail = "Lalala@msn.com";
         String fakePassword = "Lalala123";
-        LoginPage.clickOnNuorodos();
-        LoginPage.clickOnPrisijungti();
+
         LoginPage.typeEmail(fakeEmail);
         LoginPage.typePassword(fakePassword);
         LoginPage.clickLogIn();
