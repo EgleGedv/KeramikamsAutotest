@@ -29,9 +29,7 @@ public class SortItemsTest extends BaseTest {
         Collections.sort(expectedResult, Collections.reverseOrder());
 
         SortItemsPage.chooseSortByPrice();
-        SortItemsPage.sleep(3000);
         SortItemsPage.setDescendingDirection();
-        SortItemsPage.sleep(3000); //waiting to load new prices, WebDriverWait does not work in this and above cases
 
         List<Double> actualResult = new ArrayList<>(SortItemsPage.getPricesAfterFilter());
 
