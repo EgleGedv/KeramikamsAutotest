@@ -12,10 +12,12 @@ public class LoginPage {
     }
 
     public static void acceptCookies() {
+        Common.waitForElementToBeVisible(Locator.CommonActions.buttonCookiesSutinku);
         Common.clickElement(Locator.CommonActions.buttonCookiesSutinku);
     }
 
     public static void clickOnNuorodos() {
+        LoginPage.sleep(3000); //waiting for a new page to load
         Common.clickElement(Locator.CommonActions.buttonNuorodos);
     }
 
@@ -36,6 +38,7 @@ public class LoginPage {
     }
 
     public static String readFirstLineDropdownNuorodos() {
+        Common.waitForElementToBeVisible(Locator.Login.firstLineDropdownNuorodos);
         return Common.getElementText(Locator.Login.firstLineDropdownNuorodos);
     }
 
