@@ -12,19 +12,18 @@ public class ItemSearchTest extends BaseTest {
     @Override
     public void setup() {
         ItemSearchPage.open();
+        ItemSearchPage.acceptCookies();
     }
 
     @Test
     public void testPositiveUsingSearchField() {
 
-        String expectedResult = "Raudona riebi molio masė";
+        String expectedResult = "ARGILA";
         String actualResult;
-        String searchKeyword = "Raudona riebi molio mase";
+        String searchKeyword = "raudona";
 
-        ItemSearchPage.sleep(5000);
-        ItemSearchPage.acceptCookies();
         ItemSearchPage.typeItemToSearchFor(searchKeyword);
-        ItemSearchPage.sleep(5000);
+        ItemSearchPage.selectFromListMolioMases();
         ItemSearchPage.clickOnMagnifierToSearch();
 
         actualResult = ItemSearchPage.getNameFirstGivenItem();
@@ -40,10 +39,8 @@ public class ItemSearchTest extends BaseTest {
         String actualResult;
         String searchKeyword = "Rauuuu";
 
-        ItemSearchPage.sleep(5000);
-        ItemSearchPage.acceptCookies();
         ItemSearchPage.typeItemToSearchFor(searchKeyword);
-        ItemSearchPage.sleep(5000);
+        ItemSearchPage.selectFromListMolioMases();
         ItemSearchPage.clickOnMagnifierToSearch();
 
         actualResult = ItemSearchPage.readMessageNotice();
