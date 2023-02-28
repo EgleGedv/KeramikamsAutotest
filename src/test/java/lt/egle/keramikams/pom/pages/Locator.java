@@ -37,7 +37,7 @@ public class Locator {
     public static class SortItems {
         public static By buttonRikiavimas = By.xpath("(//select[@id='sorter'])[1]");
         public static By arrowSetDescending = By.xpath("(//a[@title='Set Descending Direction'])[1]");
-        public static By filterPrice = By.className("price");
+        public static By sorterPrice = By.className("price");
         public static By spanSecondItem = By.xpath("(//li[@class='item product product-item nth-child-2n']//a[@href='https://keramikams.lt/limozo-porceliano-mase-liejimui'])[1]");
         public static By spanThirdItem = By.xpath("(//li[@class='item product product-item nth-child-2np1 nth-child-3n']//a[@href='https://keramikams.lt/permatomas-imperatoriskasis-porcelianas-5kg-jade'])[1]");
     }

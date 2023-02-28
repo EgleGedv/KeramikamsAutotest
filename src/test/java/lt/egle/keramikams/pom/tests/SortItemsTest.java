@@ -23,19 +23,20 @@ public class SortItemsTest extends BaseTest {
     @Test
     public void testSortByPriceLowestToHighestItemsPorcelianas() {
 
-        List<Double> expectedResult = new ArrayList<>(SortItemsPage.getPricesBeforeFilter());
+        List<Double> expectedResult = new ArrayList<>(SortItemsPage.getPricesBeforeSorting());
 
         Collections.sort(expectedResult, Collections.reverseOrder());
 
         SortItemsPage.chooseSortByPrice();
         SortItemsPage.setDescendingDirection();
 
-        List<Double> actualResult = new ArrayList<>(SortItemsPage.getPricesAfterFilter());
+        List<Double> actualResult = new ArrayList<>(SortItemsPage.getPricesAfterSorting());
 
         System.out.println(actualResult);
         System.out.println(expectedResult);
 
         Assert.assertEquals(actualResult, expectedResult);
+
 
     }
 }

@@ -23,13 +23,13 @@ public class SortItemsPage {
         Common.clickElement(Locator.SortItems.arrowSetDescending);
     }
 
-    public static List<Double> getPricesBeforeFilter() {
-        return Common.getListPrices(Locator.SortItems.filterPrice);
+    public static List<Double> getPricesBeforeSorting() {
+        return Common.getListPrices(Locator.SortItems.sorterPrice);
 
     }
 
-    public static List<Double> getPricesAfterFilter() {
+    public static List<Double> getPricesAfterSorting() {
         Common.waitForElementToBePresent(Locator.SortItems.spanThirdItem);
-        return Common.getListPrices(Locator.SortItems.filterPrice);
+        return Common.getListPrices(Locator.SortItems.sorterPrice);
     }
 }
