@@ -5,10 +5,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import javax.swing.*;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
@@ -134,5 +136,11 @@ public class Common {
     public static void waitForTextToBePresentInElementLocated(By locator, String text) {
         WebDriverWait webDriverWait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
         webDriverWait.until(ExpectedConditions.textToBePresentInElementLocated(locator, text));
+    }
+
+    public static void mouseHoverOnElement(By locator) {
+        Actions actions = new Actions(Driver.getDriver());
+        actions.moveToElement(Driver.getDriver().findElement(locator));
+        actions.perform();
     }
 }

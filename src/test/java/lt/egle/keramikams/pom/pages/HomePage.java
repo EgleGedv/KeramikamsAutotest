@@ -24,7 +24,7 @@ public class HomePage {
         Common.sendKeysToElement(Locator.Homepage.inputSearch, item);
     }
 
-    public static void selectCategoryFromList(String category) {
+    public static void selectCategoryFromListVisosKategorijos(String category) {
         Common.clickElement(
                 Locator.Homepage.inputByTextInCategory(category)
         );
@@ -35,5 +35,12 @@ public class HomePage {
         Common.clickElement(Locator.Homepage.iconMagnifier);
     }
 
+    public static void mouseHoverOnPrekiuKatalogas() {
+        Common.mouseHoverOnElement(Locator.Homepage.buttonPrekiuKatalogas);
+    }
 
+
+    public static void selectFromPrekiuKatalogas(String category) {
+        Common.clickElement(Locator.Homepage.inputByTitle(category));
+    }
 }

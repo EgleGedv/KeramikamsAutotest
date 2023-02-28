@@ -25,7 +25,7 @@ public class ItemSearchTest extends BaseTest {
         String actualResult;
 
         HomePage.typeItemToSearchFor(searchKeyword);
-        HomePage.selectCategoryFromList(category);
+        HomePage.selectCategoryFromListVisosKategorijos(category);
         HomePage.clickOnMagnifierToSearch();
 
         actualResult = ItemSearchPage.getNameFirstGivenItem();
@@ -43,7 +43,7 @@ public class ItemSearchTest extends BaseTest {
         String actualResult;
 
         HomePage.typeItemToSearchFor(searchKeyword);
-        HomePage.selectCategoryFromList(category);
+        HomePage.selectCategoryFromListVisosKategorijos(category);
         HomePage.clickOnMagnifierToSearch();
 
         actualResult = ItemSearchPage.readMessageNotice();

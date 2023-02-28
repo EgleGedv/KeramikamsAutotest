@@ -46,6 +46,13 @@ public class Locator {
         public static By wordClickablePrisijungti = By.xpath("(//a[contains(text(),'Prisijungti')])[1]");
         public static By iconMagnifier = By.xpath("//button[@class='action search']");
         public static By inputSearch = By.xpath("//input[@id='search']");
+        public static By buttonPrekiuKatalogas = By.xpath("//a[@title='Prekių katalogas']");
+
+        public static By inputByTitle(String title) {
+            return By.xpath(
+                    String.format("//a[@title='%s']", title)
+            );
+        }
 
         public static By inputByTextInCategory(String categoryName) {
             return By.xpath(
