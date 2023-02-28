@@ -22,7 +22,7 @@ public class SideBarFilterTest extends BaseTest {
     public void testSideBarFilterBotzWhite9876(){
 
         SideBarFilterPage.chooseCategoryInSideBarBOTZ();
-        SideBarFilterPage.scrollDown();
+        SideBarFilterPage.scrollDownToSeePriceRangeSlider();
         SideBarFilterPage.setPriceRange();
 
 

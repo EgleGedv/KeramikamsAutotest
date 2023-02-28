@@ -7,10 +7,12 @@ public class SideBarFilterPage {
     }
 
     public static void setPriceRange() {
-        Common.slideElement();
+        Common.slideElement(Locator.SideBarFilterPage.sliderPriceStart, -160, 0);
     }
 
-    public static void scrollDown() {
+
+    public static void scrollDownToSeePriceRangeSlider() {
+        Common.scrollToElement(Locator.SideBarFilterPage.spanSideBarKaina);
 
     }
 }

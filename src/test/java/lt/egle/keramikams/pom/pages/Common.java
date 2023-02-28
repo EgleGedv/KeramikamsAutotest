@@ -9,6 +9,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.JavascriptExecutor;
 
 import javax.swing.*;
 import java.time.Duration;
@@ -144,12 +145,22 @@ public class Common {
         actions.perform();
     }
 
-    public static void slideElement() {
+    public static void slideElement(By locator, int xOffSet, int yOffSet) {
         Actions actions = new Actions(Driver.getDriver());
-        WebElement slider = getElement(Locator.SideBarFilterPage.sliderPriceStart);
+        WebElement slider = getElement(locator);
         //actions.clickAndHold(slider);
-        actions.dragAndDropBy(slider, -30,0);
+        actions.dragAndDropBy(slider, xOffSet, yOffSet);
 
         actions.perform();
     }
+
+    public static void scrollToElement(By locator) {
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        WebElement Element = Driver.getDriver().findElement(locator);
+        js.executeScript("arguments[0].scrollIntoView();", Element);
+
+
+    }
+
+
 }
