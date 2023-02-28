@@ -9,7 +9,6 @@ import org.testng.annotations.Test;
 
 public class LoginTest extends BaseTest {
 
-    // LoginPositive fails when running with testng because of reCaptcha, please run it separately
 
     @BeforeMethod
     @Override
@@ -20,8 +19,8 @@ public class LoginTest extends BaseTest {
         HomePage.clickOnPrisijungti();
     }
 
+    //please run testPositiveLogin separately and only by itself, otherwise it will not work because of reCaptcha
     @Test
-
     public void testPositiveLogin() {
 
         String expectedResult = "SVEIKI ATVYKĘ, COCO COCONUT!";

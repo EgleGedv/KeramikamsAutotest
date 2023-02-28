@@ -2,15 +2,6 @@ package lt.egle.keramikams.pom.pages;
 
 public class ItemSearchPage {
 
-    public static void open() {
-        Common.openUrl("https://keramikams.lt/");
-    }
-
-    public static void acceptCookies() {
-        Common.waitForElementToBeVisible(Locator.CommonActions.buttonCookiesSutinku);
-        Common.clickElement(Locator.CommonActions.buttonCookiesSutinku);
-    }
-
     public static void typeItemToSearchFor(String item) {
         Common.sendKeysToElement(Locator.ItemSearch.inputSearch, item);
     }

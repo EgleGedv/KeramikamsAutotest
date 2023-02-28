@@ -2,10 +2,6 @@ package lt.egle.keramikams.pom.pages;
 
 public class LoginPage {
 
-    public static void sleep(int millis) {
-        Common.sleep(millis);
-    }
-
     public static void typeEmail(String email) {
         Common.sendKeysToElement(Locator.Login.fieldElPastas, email);
     }

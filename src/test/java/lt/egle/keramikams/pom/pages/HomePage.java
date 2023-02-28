@@ -11,11 +11,12 @@ public class HomePage {
     }
 
     public static void clickOnNuorodos() {
-        LoginPage.sleep(5000); //waiting for a new page to load
+        Common.waitForElementToBePresent(Locator.CommonActions.buttonNuorodos);
         Common.clickElement(Locator.CommonActions.buttonNuorodos);
     }
 
     public static void clickOnPrisijungti() {
+
         Common.clickElement(Locator.Login.wordClickablePrisijungti);
     }
 }
