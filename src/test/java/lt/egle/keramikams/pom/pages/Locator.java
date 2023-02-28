@@ -6,8 +6,6 @@ public class Locator {
 
 
     public static class Login {
-
-        public static By wordClickablePrisijungti = By.xpath("(//a[contains(text(),'Prisijungti')])[1]");
         public static By fieldElPastas = By.xpath("//input[@name='login[username]']");
         public static By fieldSlaptazodis = By.xpath("//input[@name='login[password]']");
         public static By buttonPrisijungti = By.xpath("(//span[contains(text(),'Prisijungti')])[1]");
@@ -45,6 +43,7 @@ public class Locator {
     }
 
     public static class Homepage {
+        public static By wordClickablePrisijungti = By.xpath("(//a[contains(text(),'Prisijungti')])[1]");
         public static By iconMagnifier = By.xpath("//button[@class='action search']");
         public static By inputSearch = By.xpath("//input[@id='search']");
 

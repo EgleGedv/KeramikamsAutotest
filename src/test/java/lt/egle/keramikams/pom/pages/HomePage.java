@@ -1,7 +1,5 @@
 package lt.egle.keramikams.pom.pages;
 
-import org.openqa.selenium.By;
-
 public class HomePage {
     public static void open() {
         Common.openUrl("https://keramikams.lt/");
@@ -19,7 +17,7 @@ public class HomePage {
 
     public static void clickOnPrisijungti() {
 
-        Common.clickElement(Locator.Login.wordClickablePrisijungti);
+        Common.clickElement(Locator.Homepage.wordClickablePrisijungti);
     }
 
     public static void typeItemToSearchFor(String item) {
