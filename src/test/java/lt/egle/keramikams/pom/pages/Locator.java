@@ -40,7 +40,6 @@ public class Locator {
     }
 
     public static class SortItems {
-        public static By spanKaina = By.xpath("//span[@data-price-type='finalPrice']");
         public static By buttonRikiavimas = By.xpath("(//select[@id='sorter'])[1]");
         public static By arrowSetDescending = By.xpath("(//a[@title='Set Descending Direction'])[1]");
         public static By filterPrice = By.className("price");
