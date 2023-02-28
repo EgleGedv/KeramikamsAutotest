@@ -14,6 +14,7 @@ public class AddToCartTest extends BaseTest {
     @Override
     public void setup() {
         AddToCartPage.open();
+        AddToCartPage.acceptCookies();
     }
 
     @Test
@@ -28,7 +29,7 @@ public class AddToCartTest extends BaseTest {
         String actualResult;
 
         AddToCartPage.sleep(3000);
-        AddToCartPage.acceptCookies();
+
         AddToCartPage.clickButtonAddToCart();
         AddToCartPage.selectTextGivenValueQuantity20Kg(Keys.chord(Keys.CONTROL, "a"));
         AddToCartPage.typeNewValueQuantity20Kg(quantity20Kg);

@@ -10,6 +10,7 @@ public class AddToCartPage {
     }
 
     public static void acceptCookies() {
+
         Common.clickElement(Locator.CommonActions.buttonCookiesSutinku);
     }
 
