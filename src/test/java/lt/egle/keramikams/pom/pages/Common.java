@@ -148,9 +148,7 @@ public class Common {
     public static void slideElement(By locator, int xOffSet, int yOffSet) {
         Actions actions = new Actions(Driver.getDriver());
         WebElement slider = getElement(locator);
-        //actions.clickAndHold(slider);
         actions.dragAndDropBy(slider, xOffSet, yOffSet);
-
         actions.perform();
     }
 

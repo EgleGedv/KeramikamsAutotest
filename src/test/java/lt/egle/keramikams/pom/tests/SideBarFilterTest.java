@@ -21,9 +21,16 @@ public class SideBarFilterTest extends BaseTest {
     @Test
     public void testSideBarFilterBotzWhite9876(){
 
+        String dengiamumas = "Dengianti";
+
         SideBarFilterPage.chooseCategoryInSideBarBOTZ();
+
         SideBarFilterPage.scrollDownToSeePriceRangeSlider();
-        SideBarFilterPage.setPriceRange();
+        SideBarFilterPage.setPriceRangeFrom1Euro55ctTo4Euro55ct();
+
+        SideBarFilterPage.scrollDownToSeeDengiamumas();
+        SideBarFilterPage.selectDengiamumas(dengiamumas);
+
 
 
     }

@@ -62,11 +62,18 @@ public class Locator {
         }
     }
 
-    public class SideBarFilterPage {
+    public static class SideBarFilterPage {
         public static By buttonBotz = By.xpath("(//a[@href='https://keramikams.lt/prekiu-katalogas/glazura-keramikai/vokiska-glazura/botz'])[4]");
         public static By sliderPriceStart = By.xpath("//a[@class='ui-slider-handle ui-state-default ui-corner-all' and @style='left: 100%;']");
         public static By spanSideBarKaina = By.xpath("//div[contains(text(),'Kaina')]");
+        public static By spanSideBarDengiamumas = By.xpath("//div[contains(text(),'Dengiamumas')]");;
+        public static By spanFilterValue = By.xpath("//span[@class='filter-value']");
+
+        public static By checkboxDengiamumasByName(String dengiamumas) {
+            return By.xpath(
+                    String.format("//a[contains(text(), ' %s ')]", dengiamumas)
+            );
+        }
     }
 }
-// //a[@class="ui-slider-handle ui-state-default ui-corner-all" and @style="left: 100%;"] start
-// //a[@class="ui-slider-handle ui-state-default ui-corner-all" and @style="left: 43.1034%;"] final
+
