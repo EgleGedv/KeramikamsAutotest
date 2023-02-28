@@ -6,11 +6,8 @@ public class ItemSearchPage {
         Common.openUrl("https://keramikams.lt/");
     }
 
-    public static void sleep(int millis) {
-        Common.sleep(millis);
-    }
-
     public static void acceptCookies() {
+        Common.waitForElementToBeVisible(Locator.CommonActions.buttonCookiesSutinku);
         Common.clickElement(Locator.CommonActions.buttonCookiesSutinku);
     }
 
@@ -19,14 +16,20 @@ public class ItemSearchPage {
     }
 
     public static void clickOnMagnifierToSearch() {
+        Common.waitForElementToBeClickable(Locator.ItemSearch.iconSearch);
         Common.clickElement(Locator.ItemSearch.iconSearch);
     }
 
     public static String getNameFirstGivenItem() {
-        return Common.getElementText(Locator.ItemSearch.textFirstItemGiven);
+        return Common.getElementText(Locator.ItemSearch.textFirstItemInList);
     }
 
     public static String readMessageNotice() {
+
         return Common.getElementText(Locator.ItemSearch.textMessageNotice);
+    }
+
+    public static void selectFromListMolioMases() {
+        Common.clickElement(Locator.ItemSearch.dropDownKategorijosMolioMases);
     }
 }

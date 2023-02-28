@@ -120,4 +120,9 @@ public class Common {
     public static void selectAllText(By locator) {
         getElement(locator).sendKeys(Keys.chord(Keys.CONTROL, "a"));
     }
+
+    public static void waitForElementToBeClickable(By locator) {
+        WebDriverWait webDriverWait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
+        webDriverWait.until(ExpectedConditions.elementToBeClickable(locator));
+    }
 }

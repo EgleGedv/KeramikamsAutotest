@@ -24,8 +24,9 @@ public class Locator {
 
         public static By inputSearch = By.xpath("//input[@id='search']");
         public static By iconSearch = By.xpath("//button[@class='action search']");
-        public static By textFirstItemGiven = By.xpath("//a[contains(text(), 'Raudona riebi molio masė')]");
+        public static By textFirstItemInList = By.xpath("//*[@id='layer-product-list']/div[2]/ol/li[1]/div/div[2]/strong/a");
         public static By textMessageNotice = By.xpath("//div[@class='message notice']");
+        public static By dropDownKategorijosMolioMases = By.xpath("//*[@id='mpsearch-category']/option[3]");
     }
 
     public static class AddToCart {
