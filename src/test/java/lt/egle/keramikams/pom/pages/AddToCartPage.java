@@ -39,7 +39,8 @@ public class AddToCartPage {
         Common.clickElement(Locator.AddToCart.buttonIKrepseli);
     }
 
-    public static String readValueNumberOfItemsInBasket() {
+    public static String readValueNumberOfItemsInBasket(String text) {
+        Common.waitForTextToBePresentInElementLocated(Locator.AddToCart.numberofItemsinBasket,text);
         return Common.getElementText(Locator.AddToCart.numberofItemsinBasket);
     }
 }

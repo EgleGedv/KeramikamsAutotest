@@ -65,7 +65,7 @@ public class Common {
     }
 
     public static void acceptAlert() {
-        Driver.getDriver().switchTo().alert().accept(); //JavaScript lentelei uzdaryti
+        Driver.getDriver().switchTo().alert().accept();
     }
 
     public static void sleep(int millis) {
@@ -129,5 +129,10 @@ public class Common {
     public static void waitForElementToBeClickable(By locator) {
         WebDriverWait webDriverWait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
         webDriverWait.until(ExpectedConditions.elementToBeClickable(locator));
+    }
+
+    public static void waitForTextToBePresentInElementLocated(By locator, String text) {
+        WebDriverWait webDriverWait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
+        webDriverWait.until(ExpectedConditions.textToBePresentInElementLocated(locator, text));
     }
 }

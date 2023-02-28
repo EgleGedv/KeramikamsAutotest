@@ -34,9 +34,7 @@ public class AddToCartTest extends BaseTest {
         AddToCartPage.typeNewValueQuantity5Kg(quantity5Kg);
         AddToCartPage.clickButtonSubmitAddToCart();
 
-        AddToCartPage.sleep(3000);
-
-        actualResult = AddToCartPage.readValueNumberOfItemsInBasket();
+        actualResult = AddToCartPage.readValueNumberOfItemsInBasket(expectedResult);
 
         Assert.assertTrue(actualResult.contains(expectedResult),
                 String.format("Expected Result: %s, actual result: %s", expectedResult, actualResult));

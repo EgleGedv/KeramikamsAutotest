@@ -16,7 +16,6 @@ public class SortItemsTest extends BaseTest {
     @BeforeMethod
     @Override
     public void setup() {
-
         SortItemsPage.open();
         SortItemsPage.acceptCookies();
     }
