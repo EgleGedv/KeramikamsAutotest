@@ -28,17 +28,17 @@ public class AddToCartTest extends BaseTest {
         expectedResult = totalItemsInBasket.toString();
         String actualResult;
 
-        AddToCartPage.sleep(3000);
-
         AddToCartPage.clickButtonAddToCart();
-        AddToCartPage.selectTextGivenValueQuantity20Kg(Keys.chord(Keys.CONTROL, "a"));
+        AddToCartPage.selectTextGivenValueQuantity20Kg();
         AddToCartPage.typeNewValueQuantity20Kg(quantity20Kg);
-        AddToCartPage.selectTextGivenValueQuantity5Kg(Keys.chord(Keys.CONTROL, "a"));
+        AddToCartPage.selectTextGivenValueQuantity5Kg();
         AddToCartPage.typeNewValueQuantity5Kg(quantity5Kg);
         AddToCartPage.clickButtonSubmitAddToCart();
+
         AddToCartPage.sleep(3000);
 
         actualResult = AddToCartPage.readValueNumberOfItemsInBasket();
+
         Assert.assertTrue(actualResult.contains(expectedResult),
                 String.format("Expected Result: %s, actual result: %s", expectedResult, actualResult));
 

@@ -2,8 +2,10 @@ package lt.egle.keramikams.pom.pages;
 
 import lt.egle.keramikams.pom.utils.Driver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -114,5 +116,9 @@ public class Common {
     public static void waitForElementToBeVisible(By locator) {
         WebDriverWait webDriverWait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
         webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(locator));
+    }
+
+    public static void selectAllText(By locator) {
+        getElement(locator).sendKeys(Keys.chord(Keys.CONTROL, "a"));
     }
 }

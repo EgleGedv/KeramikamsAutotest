@@ -1,5 +1,7 @@
 package lt.egle.keramikams.pom.pages;
 
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 public class AddToCartPage {
     public static void open() {
         Common.openUrl("https://keramikams.lt/catalogsearch/result/?q=Raudona+riebi+molio+mas%C4%97+");
@@ -10,7 +12,7 @@ public class AddToCartPage {
     }
 
     public static void acceptCookies() {
-
+        Common.waitForElementToBeVisible(Locator.CommonActions.buttonCookiesSutinku);
         Common.clickElement(Locator.CommonActions.buttonCookiesSutinku);
     }
 
@@ -18,16 +20,16 @@ public class AddToCartPage {
         Common.clickElement(Locator.AddToCart.buttonIKrepseliRaudonaRiebiMolioMase);
     }
 
-    public static void selectTextGivenValueQuantity20Kg(String text) {
-        Common.sendKeysToElement(Locator.AddToCart.fieldQuantity20Kg, text);
+    public static void selectTextGivenValueQuantity20Kg() {
+        Common.selectAllText(Locator.AddToCart.fieldQuantity20Kg);
     }
 
     public static void typeNewValueQuantity20Kg(String quantity20Kg) {
         Common.sendKeysToElement(Locator.AddToCart.fieldQuantity20Kg, quantity20Kg);
     }
 
-    public static void selectTextGivenValueQuantity5Kg(String text) {
-        Common.sendKeysToElement(Locator.AddToCart.fieldQuantity5Kg, text);
+    public static void selectTextGivenValueQuantity5Kg() {
+        Common.selectAllText(Locator.AddToCart.fieldQuantity5Kg);
     }
 
     public static void typeNewValueQuantity5Kg(String quantity5Kg) {
@@ -35,6 +37,7 @@ public class AddToCartPage {
     }
 
     public static void clickButtonSubmitAddToCart() {
+
         Common.clickElement(Locator.AddToCart.buttonIKrepseli);
     }
 

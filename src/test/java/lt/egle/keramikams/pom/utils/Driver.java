@@ -10,8 +10,8 @@ import java.time.Duration;
 
 public class Driver {
 
-    //   private static WebDriver driver; <- paleidziant iprastai
-    private static ThreadLocal<WebDriver> driverThread = new ThreadLocal<>(); //paleisti testus paraleliai su thread
+    //   private static WebDriver driver;
+    private static ThreadLocal<WebDriver> driverThread = new ThreadLocal<>();
 
 
     public static void setDriver() {
@@ -20,13 +20,13 @@ public class Driver {
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
         chromeOptions.addArguments("--start-maximized");
-        //      chromeOptions.addArguments("--headless"); //kad neuzkrovineti UI(chrome lango) galima naudoti, greiciau testai pasileidzia
+        //      chromeOptions.addArguments("--headless");
         driverThread.set(new ChromeDriver(chromeOptions));
         driverThread.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
     }
 
-    public static WebDriver getDriver() { //getter privaciam kintamajam paimti
+    public static WebDriver getDriver() {
         return driverThread.get();
     }
 
