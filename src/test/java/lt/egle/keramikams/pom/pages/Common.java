@@ -143,4 +143,13 @@ public class Common {
         actions.moveToElement(Driver.getDriver().findElement(locator));
         actions.perform();
     }
+
+    public static void slideElement() {
+        Actions actions = new Actions(Driver.getDriver());
+        WebElement slider = getElement(Locator.SideBarFilterPage.sliderPriceStart);
+        //actions.clickAndHold(slider);
+        actions.dragAndDropBy(slider, -30,0);
+
+        actions.perform();
+    }
 }

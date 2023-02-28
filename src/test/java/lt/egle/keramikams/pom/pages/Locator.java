@@ -1,6 +1,7 @@
 package lt.egle.keramikams.pom.pages;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 
 public class Locator {
 
@@ -60,5 +61,11 @@ public class Locator {
             );
         }
     }
-}
 
+    public class SideBarFilterPage {
+        public static By buttonBotz = By.xpath("(//a[@href='https://keramikams.lt/prekiu-katalogas/glazura-keramikai/vokiska-glazura/botz'])[4]");
+        public static By sliderPriceStart = By.xpath("//a[@class='ui-slider-handle ui-state-default ui-corner-all' and @style='left: 100%;']");
+    }
+}
+// //a[@class="ui-slider-handle ui-state-default ui-corner-all" and @style="left: 100%;"] start
+// //a[@class="ui-slider-handle ui-state-default ui-corner-all" and @style="left: 43.1034%;"] final
