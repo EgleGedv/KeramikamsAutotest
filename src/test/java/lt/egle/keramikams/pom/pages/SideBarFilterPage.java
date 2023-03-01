@@ -12,16 +12,35 @@ public class SideBarFilterPage {
 
 
     public static void scrollDownToSeePriceRangeSlider() {
-        Common.scrollToElement(Locator.SideBarFilterPage.spanSideBarKaina);
+        Common.scrollToElement(Locator.SideBarFilterPage.buttonSideBarKaina);
 
     }
 
-    public static void scrollDownToSeeDengiamumas() {
-        Common.waitForElementToBeVisible(Locator.SideBarFilterPage.spanFilterValue);
-        Common.scrollToElement(Locator.SideBarFilterPage.spanSideBarDengiamumas);
+    public static void clickOnDengiamumas() {
+        Common.waitForElementToBeClickable(Locator.SideBarFilterPage.buttonSideBarDengiamumas);
+        Common.clickElement(Locator.SideBarFilterPage.buttonSideBarDengiamumas);
     }
 
-    public static void selectDengiamumas(String text) {
-        Common.clickElement(Locator.SideBarFilterPage.checkboxDengiamumasByName(text));
+    public static void selectDengianti() {
+        Common.clickElement(Locator.SideBarFilterPage.checkboxDengianti);
     }
+
+    public static void sleep() {
+        Common.sleep(5000);
+    }
+
+//    public static void selectFromDengiamumas(String typeOfDengiamumas) {
+//        Common.clickElement(Locator.SideBarFilterPage.checkboxDengiamumasByType(typeOfDengiamumas));
+//    }
+
+    public static void scrollDownToSeeBlizgesioLygis() {
+        Common.waitForElementToBePresent(Locator.SideBarFilterPage.spanFilterCurrentDengiamumas);
+        Common.scrollToElement(Locator.SideBarFilterPage.buttonSideBarBlizgesioLygis);
+    }
+
+//    public static void selectFromBlizgesioLygis(String typeOfBlizgesioLygis) {
+//        Common.waitForElementToBePresent(Locator.SideBarFilterPage.spanFilterValueDengiamumas);
+//        Common.clickElement(Locator.SideBarFilterPage.checkboxBlizgesioLygisByType(typeOfBlizgesioLygis));
+//
+//    }
 }

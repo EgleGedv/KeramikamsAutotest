@@ -64,13 +64,23 @@ public class Locator {
     public static class SideBarFilterPage {
         public static By buttonBotz = By.xpath("(//a[@href='https://keramikams.lt/prekiu-katalogas/glazura-keramikai/vokiska-glazura/botz'])[4]");
         public static By sliderPriceStart = By.xpath("//a[@class='ui-slider-handle ui-state-default ui-corner-all' and @style='left: 100%;']");
-        public static By spanSideBarKaina = By.xpath("//div[contains(text(),'Kaina')]");
-        public static By spanSideBarDengiamumas = By.xpath("//div[contains(text(),'Dengiamumas')]");;
-        public static By spanFilterValue = By.xpath("//span[@class='filter-value']");
+        public static By buttonSideBarKaina = By.xpath("//div[contains(text(),'Kaina')]");
+        public static By buttonSideBarDengiamumas = By.xpath("//div[@attribute='glazuros_dengiamumas']");
+        public static By spanFilterCurrentKaina = By.xpath("//div[@class='filter-current']//span[contains(text(), 'Kaina')]");
+        public static By spanFilterValueDengiamumas = By.xpath("//span[@class='filter-value' and contains(text(), 'Dengianti')]");
+        public static By checkboxDengianti = By.xpath("(//input[@type='checkbox'])[1]");
+        public static By spanFilterCurrentDengiamumas = By.xpath("//div[@class='filter-current']//span[contains(text(), 'Dengiamumas')]");;
+        public static By buttonSideBarBlizgesioLygis = By.xpath("//div[@attribute='glazuros_blizgesys']");
 
-        public static By checkboxDengiamumasByName(String dengiamumas) {
+        public static By checkboxDengiamumasByType(String type) {
             return By.xpath(
-                    String.format("//a[contains(text(), ' %s ')]", dengiamumas)
+                    String.format("//a[contains(text(), ' %s ')]", type)
+            );
+        }
+
+        public static By checkboxBlizgesioLygisByType(String blizgesioLygis) {
+            return By.xpath(
+                    String.format("//a[contains(text(), ' %s ')]", blizgesioLygis)
             );
         }
     }
