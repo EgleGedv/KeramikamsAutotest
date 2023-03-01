@@ -3,7 +3,7 @@
 <suite name="Testing Keramikams Website" parallel="classes" thread-count="2">
     <test name="Demo Test">
         <classes>
-            <class name="lt.egle.keramikams.pom.tests.AddToCartTest"/>
+            <class name="lt.egle.keramikams.pom.tests.CartTest"/>
             <class name="lt.egle.keramikams.pom.tests.ItemSearchTest"/>
             <class name="lt.egle.keramikams.pom.tests.SortItemsTest"/>
         </classes>

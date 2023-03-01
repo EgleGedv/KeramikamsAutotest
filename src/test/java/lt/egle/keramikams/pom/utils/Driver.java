@@ -12,7 +12,6 @@ public class Driver {
 
     private static ThreadLocal<WebDriver> driverThread = new ThreadLocal<>();
 
-
     public static void setDriver() {
 
         WebDriverManager.chromedriver().setup();
@@ -33,5 +32,4 @@ public class Driver {
         driverThread.get().quit();
         driverThread.remove();
     }
-
 }

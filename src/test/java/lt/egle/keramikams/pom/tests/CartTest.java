@@ -1,19 +1,19 @@
 package lt.egle.keramikams.pom.tests;
 
-import lt.egle.keramikams.pom.pages.AddToCartPage;
+import lt.egle.keramikams.pom.pages.CartPage;
 import lt.egle.keramikams.pom.tests.common.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-public class AddToCartTest extends BaseTest {
+public class CartTest extends BaseTest {
 
 
     @BeforeMethod
     @Override
     public void setup() {
-        AddToCartPage.open();
-        AddToCartPage.acceptCookies();
+        CartPage.open();
+        CartPage.acceptCookies();
     }
 
     @Test
@@ -27,14 +27,14 @@ public class AddToCartTest extends BaseTest {
         expectedResult = totalItemsInBasket.toString();
         String actualResult;
 
-        AddToCartPage.clickButtonAddToCart();
-        AddToCartPage.selectTextGivenValueQuantity20Kg();
-        AddToCartPage.typeNewValueQuantity20Kg(quantity20Kg);
-        AddToCartPage.selectTextGivenValueQuantity5Kg();
-        AddToCartPage.typeNewValueQuantity5Kg(quantity5Kg);
-        AddToCartPage.clickButtonSubmitAddToCart();
+        CartPage.clickButtonAddToCart();
+        CartPage.selectTextGivenValueQuantity20Kg();
+        CartPage.typeNewValueQuantity20Kg(quantity20Kg);
+        CartPage.selectTextGivenValueQuantity5Kg();
+        CartPage.typeNewValueQuantity5Kg(quantity5Kg);
+        CartPage.clickButtonSubmitAddToCart();
 
-        actualResult = AddToCartPage.readValueNumberOfItemsInBasket(expectedResult);
+        actualResult = CartPage.readValueNumberOfItemsInBasket(expectedResult);
 
         Assert.assertTrue(actualResult.contains(expectedResult),
                 String.format("Expected Result: %s, actual result: %s", expectedResult, actualResult));
