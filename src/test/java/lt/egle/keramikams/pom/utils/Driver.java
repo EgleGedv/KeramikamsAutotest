@@ -18,6 +18,7 @@ public class Driver {
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
         chromeOptions.addArguments("--start-maximized");
+        chromeOptions.addArguments("--force-device-scale-factor=0.65");
         //      chromeOptions.addArguments("--headless");
         driverThread.set(new ChromeDriver(chromeOptions));
         driverThread.get().manage().timeouts().implicitlyWait(Duration.ofSeconds(15));

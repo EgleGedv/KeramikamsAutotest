@@ -11,32 +11,32 @@ public class CartPage {
     }
 
     public static void clickButtonAddToCart() {
-        Common.clickElement(Locator.AddToCart.buttonIKrepseliRaudonaRiebiMolioMase);
+        Common.clickElement(Locator.Cart.buttonIKrepseliRaudonaRiebiMolioMase);
     }
 
     public static void selectTextGivenValueQuantity20Kg() {
-        Common.selectAllText(Locator.AddToCart.fieldQuantity20Kg);
+        Common.selectAllText(Locator.Cart.fieldQuantity20Kg);
     }
 
     public static void typeNewValueQuantity20Kg(String quantity20Kg) {
-        Common.sendKeysToElement(Locator.AddToCart.fieldQuantity20Kg, quantity20Kg);
+        Common.sendKeysToElement(Locator.Cart.fieldQuantity20Kg, quantity20Kg);
     }
 
     public static void selectTextGivenValueQuantity5Kg() {
-        Common.selectAllText(Locator.AddToCart.fieldQuantity5Kg);
+        Common.selectAllText(Locator.Cart.fieldQuantity5Kg);
     }
 
     public static void typeNewValueQuantity5Kg(String quantity5Kg) {
-        Common.sendKeysToElement(Locator.AddToCart.fieldQuantity5Kg, quantity5Kg);
+        Common.sendKeysToElement(Locator.Cart.fieldQuantity5Kg, quantity5Kg);
     }
 
     public static void clickButtonSubmitAddToCart() {
 
-        Common.clickElement(Locator.AddToCart.buttonIKrepseli);
+        Common.clickElement(Locator.Cart.buttonIKrepseli);
     }
 
     public static String readValueNumberOfItemsInBasket(String text) {
-        Common.waitForTextToBePresentInElementLocated(Locator.AddToCart.numberofItemsinBasket,text);
-        return Common.getElementText(Locator.AddToCart.numberofItemsinBasket);
+        Common.waitForTextToBePresentInElementLocated(Locator.Cart.numberofItemsinBasket,text);
+        return Common.getElementText(Locator.Cart.numberofItemsinBasket);
     }
 }

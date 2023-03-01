@@ -25,7 +25,7 @@ public class Locator {
 
     }
 
-    public static class AddToCart {
+    public static class Cart {
 
         public static By buttonIKrepseliRaudonaRiebiMolioMase = By.xpath("//form[@action='https://keramikams.lt/checkout/cart/add/uenc/aHR0cHM6Ly9rZXJhbWlrYW1zLmx0L2NhdGFsb2dzZWFyY2gvcmVzdWx0Lz9xPVJhdWRvbmErcmllYmkrbW9saW8rbWFzJUM0JTk3Kw%2C%2C/product/5551/']");
         public static By fieldQuantity20Kg = By.xpath("//input[@name='super_group[2180]']");
@@ -42,7 +42,7 @@ public class Locator {
         public static By spanThirdItem = By.xpath("(//li[@class='item product product-item nth-child-2np1 nth-child-3n']//a[@href='https://keramikams.lt/permatomas-imperatoriskasis-porcelianas-5kg-jade'])[1]");
     }
 
-    public static class Homepage {
+    public static class Home {
         public static By wordClickablePrisijungti = By.xpath("(//a[contains(text(),'Prisijungti')])[1]");
         public static By iconMagnifier = By.xpath("//button[@class='action search']");
         public static By inputSearch = By.xpath("//input[@id='search']");

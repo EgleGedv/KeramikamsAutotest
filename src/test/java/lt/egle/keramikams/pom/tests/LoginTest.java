@@ -9,6 +9,7 @@ import org.testng.annotations.Test;
 
 public class LoginTest extends BaseTest {
 
+    //please run testPositiveLogin separately and only by itself, otherwise it will not work because of reCaptcha
 
     @BeforeMethod
     @Override
@@ -19,7 +20,6 @@ public class LoginTest extends BaseTest {
         HomePage.clickOnPrisijungti();
     }
 
-    //please run testPositiveLogin separately and only by itself, otherwise it will not work because of reCaptcha
     @Test
     public void testPositiveLogin() {
 

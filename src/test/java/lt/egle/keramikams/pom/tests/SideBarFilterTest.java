@@ -20,20 +20,18 @@ public class SideBarFilterTest extends BaseTest {
     @Test
     public void testSideBarFilterBotzWhite9876() {
 
-        String blizgesioLygis = "Blizgus";
+//        String blizgesioLygis = "Blizgus";
 
         SideBarFilterPage.chooseCategoryInSideBarBOTZ();
 
-        SideBarFilterPage.scrollDownToSeePriceRangeSlider();
+//        SideBarFilterPage.scrollDownToSeePriceRangeSlider();
         SideBarFilterPage.setPriceRangeFrom1Euro55ctTo4Euro55ct();
 
-        SideBarFilterPage.sleep();
         SideBarFilterPage.clickOnDengiamumas();
         SideBarFilterPage.selectDengianti();
 
-        SideBarFilterPage.scrollDownToSeeBlizgesioLygis();
         SideBarFilterPage.sleep();
-        //SideBarFilterPage.selectFromBlizgesioLygis(blizgesioLygis);
+//        SideBarFilterPage.selectFromBlizgesioLygis(blizgesioLygis);
 
 
     }

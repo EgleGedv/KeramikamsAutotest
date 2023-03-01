@@ -17,30 +17,30 @@ public class HomePage {
 
     public static void clickOnPrisijungti() {
 
-        Common.clickElement(Locator.Homepage.wordClickablePrisijungti);
+        Common.clickElement(Locator.Home.wordClickablePrisijungti);
     }
 
     public static void typeItemToSearchFor(String item) {
-        Common.sendKeysToElement(Locator.Homepage.inputSearch, item);
+        Common.sendKeysToElement(Locator.Home.inputSearch, item);
     }
 
     public static void selectCategoryFromListVisosKategorijos(String category) {
         Common.clickElement(
-                Locator.Homepage.inputByTextInCategory(category)
+                Locator.Home.inputByTextInCategory(category)
         );
     }
 
     public static void clickOnMagnifierToSearch() {
-        Common.waitForElementToBeClickable(Locator.Homepage.iconMagnifier);
-        Common.clickElement(Locator.Homepage.iconMagnifier);
+        Common.waitForElementToBeClickable(Locator.Home.iconMagnifier);
+        Common.clickElement(Locator.Home.iconMagnifier);
     }
 
     public static void mouseHoverOnPrekiuKatalogas() {
-        Common.mouseHoverOnElement(Locator.Homepage.buttonPrekiuKatalogas);
+        Common.mouseHoverOnElement(Locator.Home.buttonPrekiuKatalogas);
     }
 
 
     public static void selectFromPrekiuKatalogas(String category) {
-        Common.clickElement(Locator.Homepage.inputByTitle(category));
+        Common.clickElement(Locator.Home.inputByTitle(category));
     }
 }
