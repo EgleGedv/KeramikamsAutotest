@@ -19,7 +19,8 @@ public class SortItemsPage {
     }
 
     public static void setDescendingDirection() {
-        Common.waitForElementToBePresent(Locator.SortItems.spanSecondItem);
+        Common.sleep(5000);
+        //Common.waitForElementToBeClickable(Locator.SortItems.spanSecondItem);
         Common.clickElement(Locator.SortItems.arrowSetDescending);
     }
 
