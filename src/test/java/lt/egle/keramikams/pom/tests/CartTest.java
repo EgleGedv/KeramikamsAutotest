@@ -16,7 +16,7 @@ public class CartTest extends BaseTest {
     }
 
     @Test
-    public void testAddToCartRaudonaRiebiMolioMase() {
+    public void testAddToCartRaudonaRiebiMolioMase20kg_2and5kg_2() {
 
         String quantity20Kg = "2";
         String quantity5Kg = "2";

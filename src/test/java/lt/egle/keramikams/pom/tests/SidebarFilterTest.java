@@ -52,4 +52,9 @@ public class SidebarFilterTest extends BaseTest {
 
         Assert.assertEquals(actualResult, expectedResult);
     }
+
+    @Test
+    public void testSideBarFilterBotzWhite9876() {
+
+    }
 }

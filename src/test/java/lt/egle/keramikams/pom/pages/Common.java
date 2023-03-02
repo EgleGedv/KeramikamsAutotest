@@ -117,10 +117,29 @@ public class Common {
         actions.perform();
     }
 
+    public static void waitUntilPageCompletelyLoaded(int seconds) {
+        JavascriptExecutor j = (JavascriptExecutor) Driver.getDriver();
+
+        for (int i = 0; i <= seconds*2; i++) {
+            sleep(seconds*1000/2);
+            if (j.executeScript("return document.readyState").toString().equals("complete")) break;
+        }
+    }
+
     public static void scrollToElement(By locator) {
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
         WebElement Element = Driver.getDriver().findElement(locator);
         js.executeScript("arguments[0].scrollIntoView();", Element);
+    }
+
+    public static void setSlideElement(By locator, int xOffSet, int yOffSet) {
+        WebElement element = getElement(locator);
+
+        Actions actions = new Actions(Driver.getDriver());
+        actions
+                .dragAndDropBy(element, xOffSet, yOffSet)
+                .build()
+                .perform();
     }
 }
 

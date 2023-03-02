@@ -22,7 +22,7 @@ public class LoginTest extends BaseTest {
     }
 
     @Test
-    public void testPositiveLogin() {
+    public void testPositiveLogin_CocoCoconut() {
 
         String expectedResult = "Coco Coconut";
         String actualResult;
@@ -44,7 +44,7 @@ public class LoginTest extends BaseTest {
     }
 
     @Test
-    public void testNegativeLogin() {
+    public void testNegativeLogin_Lalala() {
 
         String expectedResult = "Neteisingas";
         String actualResult;

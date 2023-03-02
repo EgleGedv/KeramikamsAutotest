@@ -19,7 +19,7 @@ public class SortItemsPage {
     }
 
     public static void setDescendingDirection() {
-        Common.sleep(3000);
+        Common.waitUntilPageCompletelyLoaded(10);
         Common.clickElement(Locator.SortItems.arrowSetDescending);
     }
 
