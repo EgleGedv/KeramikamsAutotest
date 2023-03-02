@@ -8,7 +8,7 @@ Test login password: Coconut123
 
 ### 1. Login
 
-> ***Note: Login tests are not included in testng.xml file. Please run testPositiveLogin separately and only by itself, otherwise it will not work because of reCaptcha.***
+> ***Note: Login tests are not included in testng.xml file. Please run testPositiveLoginCoco_Coconut separately and only by itself, otherwise it will not work because of reCaptcha.***
 
 #### 1.1 Log in using existing account details
 

@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 public class LoginTest extends BaseTest {
 
-    //please run testPositiveLogin separately and only by itself, otherwise it will not work because of reCaptcha
+    //please run testPositiveLogin_CocoCoconut separately and only by itself, otherwise it will not work because of reCaptcha
 
     @BeforeMethod
     @Override
