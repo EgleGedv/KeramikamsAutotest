@@ -22,7 +22,7 @@ public class SidebarFilterTest extends BaseTest {
     }
 
     @Test
-    public void testSideBarPriceFilterLabelAppearanceBOTZ() {
+    public void testSideBarPriceFilterLabelBOTZ() {
 
         String expectedResult = "1,55 € - 3,55 €";
         String actualResult;
@@ -38,7 +38,7 @@ public class SidebarFilterTest extends BaseTest {
     }
 
     @Test
-    public void testSideBarPriceFilterItemsValuesBOTZ() {
+    public void testPriceFilterGivesOutCorrectValuesBOTZ() {
 
         Boolean expectedResult = true;
 
