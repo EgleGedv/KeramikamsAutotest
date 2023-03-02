@@ -6,12 +6,16 @@ public class SideBarFilterPage {
         Common.clickElement(Locator.SideBarFilterPage.buttonBotz);
     }
 
-    public static void setPriceRangeFrom1Euro55ctTo4Euro55ct() {
-        Common.slideElement(Locator.SideBarFilterPage.sliderPriceStart, -130, 0);
-    }
-
     public static void scrollDownToSeePriceRangeSlider() {
         Common.scrollToElement(Locator.SideBarFilterPage.buttonSideBarKaina);
+    }
+
+//    public static void setPriceRangeFrom1Euro55ctTo4Euro55ct() {
+//        Common.slideElement(Locator.SideBarFilterPage.sliderPriceStart, -130, 0);
+//    }
+
+    public static void setPriceRangeToMax4Euro55ct() {
+        Common.setSlideElement(Locator.SideBarFilterPage.divSliderPriceMax, -130,0);
     }
 
     public static void clickOnDengiamumas() {
@@ -26,10 +30,9 @@ public class SideBarFilterPage {
         Common.clickElement(Locator.SideBarFilterPage.checkboxDengianti);
     }
 
-    public static void sleep() {
-        Common.sleep(5000);
+    public static void sleep(int millis) {
+        Common.sleep(millis);
     }
-
 //    public static void selectFromDengiamumas(String typeOfDengiamumas) {
 //        Common.clickElement(Locator.SideBarFilterPage.checkboxDengiamumasByType(typeOfDengiamumas));
 //    }

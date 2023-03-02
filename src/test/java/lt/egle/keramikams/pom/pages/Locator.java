@@ -65,8 +65,10 @@ public class Locator {
 
     public static class SideBarFilterPage {
         public static By buttonBotz = By.xpath("(//a[@href='https://keramikams.lt/prekiu-katalogas/glazura-keramikai/vokiska-glazura/botz'])[4]");
-        public static By sliderPriceStart = By.xpath("//a[@class='ui-slider-handle ui-state-default ui-corner-all' and @style='left: 100%;']");
         public static By buttonSideBarKaina = By.xpath("//div[contains(text(),'Kaina')]");
+//        public static By sliderPriceStart = By.xpath("//a[@class='ui-slider-handle ui-state-default ui-corner-all' and @style='left: 100%;']");
+        public static By divSliderPriceMax = By.xpath("(//div[@id='ln_slider_price' and contains(@class,'slider')]/a)[2]");
+        public static By buttonSideBarDengiamumas = By.xpath("//div[@attribute='glazuros_dengiamumas']");
         public static By filterOptionDengiamumas = By.xpath("(//div[@class='filter-options-title'])[1]");
         public static By spanFilterCurrentKaina = By.xpath("//div[@class='filter-current']//span[contains(text(), 'Kaina')]");
         public static By spanFilterValueDengiamumas = By.xpath("//span[@class='filter-value' and contains(text(), 'Dengianti')]");

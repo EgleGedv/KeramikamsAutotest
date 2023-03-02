@@ -3,8 +3,6 @@ package lt.egle.keramikams.pom.pages;
 import lt.egle.keramikams.pom.utils.Driver;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.ElementClickInterceptedException;
-import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.support.ui.*;
 
 import java.time.Duration;
@@ -147,18 +145,28 @@ public class Common {
         actions.perform();
     }
 
+    public static void setSlideElement(By locator, int xOffSet, int yOffSet) {
+        WebElement element = getElement(locator);
+
+        Actions actions = new Actions(Driver.getDriver());
+        actions
+                .dragAndDropBy(element, xOffSet, yOffSet)
+                .build()
+                .perform();
+    }
+
     public static void scrollToElement(By locator) {
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
         WebElement Element = Driver.getDriver().findElement(locator);
         js.executeScript("arguments[0].scrollIntoView();", Element);
 
     }
-
 //    public static void waitForThePageToLoadCompletely() {
 //        Driver.getDriver().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(100));
-//    }
 
+//    }
     //StaleElementReferenceException
+
     public static void waitForTheElementToLoad(By locator) {
         Wait<WebDriver> wait = new FluentWait<>(Driver.getDriver())
                 .withTimeout(Duration.ofSeconds(10))
