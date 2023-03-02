@@ -74,6 +74,7 @@ public class Locator {
         public static By spanFilterCurrentDengiamumas = By.xpath("//div[@class='filter-current']//span[contains(text(), 'Dengiamumas')]");
         public static By buttonSideBarBlizgesioLygis = By.xpath("//div[@attribute='glazuros_blizgesys']");
         public static By itemBotz9894 = By.xpath("//*[@id='layer-product-list']/div[2]/ol/li[2]/div/div[2]/strong/a");
+        public static By spanCurrentFilter = By.xpath("//div[@class='filter-current']");
 
         public static By checkboxDengiamumasByType(String type) {
             return By.xpath(

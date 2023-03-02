@@ -4,7 +4,6 @@ import lt.egle.keramikams.pom.pages.HomePage;
 import lt.egle.keramikams.pom.pages.LoginPage;
 import lt.egle.keramikams.pom.pages.MyAccountPage;
 import lt.egle.keramikams.pom.tests.common.BaseTest;
-import org.apache.commons.logging.Log;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;

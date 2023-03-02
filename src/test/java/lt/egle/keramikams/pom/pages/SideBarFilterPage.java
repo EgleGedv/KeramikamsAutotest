@@ -14,12 +14,15 @@ public class SideBarFilterPage {
         Common.scrollToElement(Locator.SideBarFilterPage.buttonSideBarKaina);
     }
 
+    public static String readCurrentFilteredValue() {
+        return Common.getElementText(Locator.SideBarFilterPage.spanCurrentFilter);
+    }
+
     public static void clickOnDengiamumas() {
 //        Common.waitForElementToBeClickable(Locator.SideBarFilterPage.buttonSideBarDengiamumas);
 //        Common.isElementLoaded(Locator.SideBarFilterPage.filterOptionDengiamumas);
 //        Common.waitForElementToBeClickable(Locator.SideBarFilterPage.itemBotz9894);
 //        Common.clickElement(Locator.SideBarFilterPage.filterOptionDengiamumas);
-
     }
 
     public static void selectDengianti() {
@@ -30,7 +33,7 @@ public class SideBarFilterPage {
         Common.sleep(5000);
     }
 
-//    public static void selectFromDengiamumas(String typeOfDengiamumas) {
+//        public static void selectFromDengiamumas(String typeOfDengiamumas) {
 //        Common.clickElement(Locator.SideBarFilterPage.checkboxDengiamumasByType(typeOfDengiamumas));
 //    }
 
@@ -42,6 +45,5 @@ public class SideBarFilterPage {
     public static void selectFromBlizgesioLygis(String typeOfBlizgesioLygis) {
         Common.waitForElementToBePresent(Locator.SideBarFilterPage.spanFilterValueDengiamumas);
         Common.clickElement(Locator.SideBarFilterPage.checkboxBlizgesioLygisByType(typeOfBlizgesioLygis));
-
     }
 }

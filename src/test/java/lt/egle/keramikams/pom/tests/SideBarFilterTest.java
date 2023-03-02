@@ -3,6 +3,7 @@ package lt.egle.keramikams.pom.tests;
 import lt.egle.keramikams.pom.pages.HomePage;
 import lt.egle.keramikams.pom.pages.SideBarFilterPage;
 import lt.egle.keramikams.pom.tests.common.BaseTest;
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -18,21 +19,18 @@ public class SideBarFilterTest extends BaseTest {
     }
 
     @Test
-    public void testSideBarFilterBotzWhite9876() {
+    public void testSideBarPriceFilterBotz() {
 
-//        String blizgesioLygis = "Blizgus";
+        String expectedResult = "1,55 € - 4,55 €";
+        String actualResult;
 
         SideBarFilterPage.chooseCategoryInSideBarBOTZ();
-
         SideBarFilterPage.scrollDownToSeePriceRangeSlider();
         SideBarFilterPage.setPriceRangeFrom1Euro55ctTo4Euro55ct();
 
-        SideBarFilterPage.clickOnDengiamumas();
-        SideBarFilterPage.selectDengianti();
+        actualResult = SideBarFilterPage.readCurrentFilteredValue();
 
-  //      SideBarFilterPage.sleep();
-//        SideBarFilterPage.selectFromBlizgesioLygis(blizgesioLygis);
-
-
+        Assert.assertTrue(actualResult.contains(expectedResult),
+        String.format("Actual result: %s; Expected result: %s", actualResult, expectedResult));
     }
 }
