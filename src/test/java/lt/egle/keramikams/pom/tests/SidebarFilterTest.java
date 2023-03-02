@@ -22,7 +22,7 @@ public class SidebarFilterTest extends BaseTest {
     }
 
     @Test
-    public void testSideBarPriceFilterLabelBOTZ() {
+    public void testSideBarFiltruojamaPagalKainaLabelAppears_1Euro55ctTo3Euro55ct_BOTZ() {
 
         String expectedResult = "1,55 € - 3,55 €";
         String actualResult;
@@ -31,14 +31,14 @@ public class SidebarFilterTest extends BaseTest {
         SidebarFilterPage.scrollDownToSeePriceRangeSlider();
         SidebarFilterPage.setPriceRangeFrom1Euro55ctTo3Euro55ct();
 
-        actualResult = SidebarFilterPage.readCurrentFilteredValue();
+        actualResult = SidebarFilterPage.readFiltruojamaPagal();
 
         Assert.assertTrue(actualResult.contains(expectedResult),
         String.format("Actual result: %s; Expected result: %s", actualResult, expectedResult));
     }
 
     @Test
-    public void testPriceFilterGivesOutCorrectValuesBOTZ() {
+    public void testPriceFilter_1Euro55ctTo3Euro55ct_GivesOutCorrectItemsBOTZ() {
 
         Boolean expectedResult = true;
 

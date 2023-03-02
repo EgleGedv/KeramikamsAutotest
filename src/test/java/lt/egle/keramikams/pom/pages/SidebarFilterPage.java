@@ -16,7 +16,7 @@ public class SidebarFilterPage {
         Common.scrollToElement(Locator.SideBarFilterPage.buttonSideBarKaina);
     }
 
-    public static String readCurrentFilteredValue() {
+    public static String readFiltruojamaPagal() {
         return Common.getElementText(Locator.SideBarFilterPage.spanCurrentFilter);
     }
 
