@@ -38,7 +38,7 @@ public class SideBarFilterTest extends BaseTest {
     }
 
     @Test
-    public void testSideBarPriceFilterItemsValues() {
+    public void testSideBarPriceFilterItemsValuesBOTZ() {
 
         Boolean expectedResult = true;
 
