@@ -19,10 +19,9 @@ public class SideBarFilterPage {
     }
 
     public static void clickOnDengiamumas() {
-//        Common.waitForElementToBeClickable(Locator.SideBarFilterPage.buttonSideBarDengiamumas);
-//        Common.isElementLoaded(Locator.SideBarFilterPage.filterOptionDengiamumas);
-//        Common.waitForElementToBeClickable(Locator.SideBarFilterPage.itemBotz9894);
-//        Common.clickElement(Locator.SideBarFilterPage.filterOptionDengiamumas);
+        Common.waitForElementToBeVisible(Locator.SideBarFilterPage.buttonSideBarDengiamumas);
+        Common.waitUntilPageCompletelyLoaded(10);
+        Common.clickElement(Locator.SideBarFilterPage.buttonSideBarDengiamumas);
 
     }
 

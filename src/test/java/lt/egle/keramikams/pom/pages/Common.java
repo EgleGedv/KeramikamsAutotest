@@ -188,6 +188,15 @@ public class Common {
         actions.perform();
     }
 
+    public static void waitUntilPageCompletelyLoaded(int seconds) {
+        JavascriptExecutor j = (JavascriptExecutor) Driver.getDriver();
+
+        for (int i = 0; i <= seconds*2; i++) {
+            sleep(seconds*1000/2);
+            if (j.executeScript("return document.readyState").toString().equals("complete")) break;
+        }
+    }
+
 //    public static boolean xxx(By locator) {
 //        do {
 //            try {
