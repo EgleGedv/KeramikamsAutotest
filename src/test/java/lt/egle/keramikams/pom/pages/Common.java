@@ -46,10 +46,6 @@ public class Common {
         select.selectByValue(value);
     }
 
-    private static List<WebElement> getElements(By locator) {
-        return Driver.getDriver().findElements(locator);
-    }
-
     public static void sleep(int millis) {
         try {
             Thread.sleep(millis);
@@ -61,7 +57,7 @@ public class Common {
 
     public static List<Double> getListPrices(By locator) {
 
-        List<WebElement> filterPrice = getPrices(locator);
+        List<WebElement> filterPrice = getElements(locator);
         List<String> filterPriceList = new ArrayList<>();
 
         for (WebElement p : filterPrice) {
@@ -76,7 +72,7 @@ public class Common {
         return filterPriceListDouble;
     }
 
-    private static List<WebElement> getPrices(By locator) {
+    private static List<WebElement> getElements(By locator) {
         return Driver.getDriver().findElements(locator);
     }
 

@@ -78,11 +78,6 @@ public class Locator {
                     String.format("//*[@option-label='%s']", colourName)
             );
         }
-
-
-
-
-
     }
 
     public static class MyAccount {
