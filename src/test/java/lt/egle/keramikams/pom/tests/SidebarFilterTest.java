@@ -1,7 +1,7 @@
 package lt.egle.keramikams.pom.tests;
 
 import lt.egle.keramikams.pom.pages.HomePage;
-import lt.egle.keramikams.pom.pages.SideBarFilterPage;
+import lt.egle.keramikams.pom.pages.SidebarFilterPage;
 import lt.egle.keramikams.pom.tests.common.BaseTest;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SideBarFilterTest extends BaseTest {
+public class SidebarFilterTest extends BaseTest {
 
     @BeforeMethod
     @Override
@@ -27,11 +27,11 @@ public class SideBarFilterTest extends BaseTest {
         String expectedResult = "1,55 € - 3,55 €";
         String actualResult;
 
-        SideBarFilterPage.chooseCategoryInSideBarBOTZ();
-        SideBarFilterPage.scrollDownToSeePriceRangeSlider();
-        SideBarFilterPage.setPriceRangeFrom1Euro55ctTo3Euro55ct();
+        SidebarFilterPage.chooseCategoryInSideBarBOTZ();
+        SidebarFilterPage.scrollDownToSeePriceRangeSlider();
+        SidebarFilterPage.setPriceRangeFrom1Euro55ctTo3Euro55ct();
 
-        actualResult = SideBarFilterPage.readCurrentFilteredValue();
+        actualResult = SidebarFilterPage.readCurrentFilteredValue();
 
         Assert.assertTrue(actualResult.contains(expectedResult),
         String.format("Actual result: %s; Expected result: %s", actualResult, expectedResult));
@@ -42,13 +42,13 @@ public class SideBarFilterTest extends BaseTest {
 
         Boolean expectedResult = true;
 
-        SideBarFilterPage.chooseCategoryInSideBarBOTZ();
-        SideBarFilterPage.scrollDownToSeePriceRangeSlider();
-        SideBarFilterPage.setPriceRangeFrom1Euro55ctTo3Euro55ct();
+        SidebarFilterPage.chooseCategoryInSideBarBOTZ();
+        SidebarFilterPage.scrollDownToSeePriceRangeSlider();
+        SidebarFilterPage.setPriceRangeFrom1Euro55ctTo3Euro55ct();
 
-        List<Double> pricesAfterFiltering = new ArrayList<>(SideBarFilterPage.getFilteredPrices());
+        List<Double> pricesAfterFiltering = new ArrayList<>(SidebarFilterPage.getFilteredPrices());
 
-        Boolean actualResult = SideBarFilterPage.areAllPricesInThePriceRangeChosen(pricesAfterFiltering);
+        Boolean actualResult = SidebarFilterPage.areAllPricesInThePriceRangeChosen(pricesAfterFiltering);
 
         Assert.assertEquals(actualResult, expectedResult);
     }

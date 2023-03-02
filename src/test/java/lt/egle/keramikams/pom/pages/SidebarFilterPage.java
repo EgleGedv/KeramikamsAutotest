@@ -2,7 +2,7 @@ package lt.egle.keramikams.pom.pages;
 
 import java.util.List;
 
-public class SideBarFilterPage {
+public class SidebarFilterPage {
 
     public static void chooseCategoryInSideBarBOTZ() {
         Common.clickElement(Locator.SideBarFilterPage.buttonBotz);
