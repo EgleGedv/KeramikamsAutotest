@@ -24,13 +24,13 @@ public class SideBarFilterTest extends BaseTest {
 
         SideBarFilterPage.chooseCategoryInSideBarBOTZ();
 
-//        SideBarFilterPage.scrollDownToSeePriceRangeSlider();
+        SideBarFilterPage.scrollDownToSeePriceRangeSlider();
         SideBarFilterPage.setPriceRangeFrom1Euro55ctTo4Euro55ct();
 
         SideBarFilterPage.clickOnDengiamumas();
         SideBarFilterPage.selectDengianti();
 
-        SideBarFilterPage.sleep();
+  //      SideBarFilterPage.sleep();
 //        SideBarFilterPage.selectFromBlizgesioLygis(blizgesioLygis);
 
 

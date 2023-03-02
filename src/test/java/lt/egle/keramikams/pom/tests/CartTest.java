@@ -8,7 +8,6 @@ import org.testng.annotations.Test;
 
 public class CartTest extends BaseTest {
 
-
     @BeforeMethod
     @Override
     public void setup() {
@@ -38,7 +37,6 @@ public class CartTest extends BaseTest {
 
         Assert.assertTrue(actualResult.contains(expectedResult),
                 String.format("Expected Result: %s, actual result: %s", expectedResult, actualResult));
-
     }
 
 }

@@ -10,7 +10,7 @@ import java.time.Duration;
 
 public class Driver {
 
-    private static ThreadLocal<WebDriver> driverThread = new ThreadLocal<>();
+    public static ThreadLocal<WebDriver> driverThread = new ThreadLocal<>();
 
     public static void setDriver() {
 

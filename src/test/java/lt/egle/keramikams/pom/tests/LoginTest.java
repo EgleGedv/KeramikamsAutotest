@@ -2,7 +2,9 @@ package lt.egle.keramikams.pom.tests;
 
 import lt.egle.keramikams.pom.pages.HomePage;
 import lt.egle.keramikams.pom.pages.LoginPage;
+import lt.egle.keramikams.pom.pages.MyAccountPage;
 import lt.egle.keramikams.pom.tests.common.BaseTest;
+import org.apache.commons.logging.Log;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -23,7 +25,7 @@ public class LoginTest extends BaseTest {
     @Test
     public void testPositiveLogin() {
 
-        String expectedResult = "SVEIKI ATVYKĘ, COCO COCONUT!";
+        String expectedResult = "Coco Coconut";
         String actualResult;
 
         String email = "Cocococonut144@gmail.com";
@@ -33,8 +35,10 @@ public class LoginTest extends BaseTest {
         LoginPage.typePassword(password);
         LoginPage.clickLogIn();
         LoginPage.clickOnNuorodos();
+        LoginPage.clickButtonForMoreOptions();
+        LoginPage.clickManoPaskyra();
 
-        actualResult = LoginPage.readFirstLineDropdownNuorodos();
+        actualResult = MyAccountPage.readParagraphKontaktineInformacija();
 
         Assert.assertTrue(actualResult.contains(expectedResult),
                 String.format("Expected result: %s, Actual result: %s", expectedResult, actualResult));

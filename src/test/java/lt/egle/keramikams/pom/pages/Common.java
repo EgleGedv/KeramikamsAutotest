@@ -1,17 +1,12 @@
 package lt.egle.keramikams.pom.pages;
 
 import lt.egle.keramikams.pom.utils.Driver;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.NoAlertPresentException;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.ElementClickInterceptedException;
+import org.openqa.selenium.StaleElementReferenceException;
+import org.openqa.selenium.support.ui.*;
 
-import javax.swing.*;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
@@ -130,7 +125,7 @@ public class Common {
     }
 
     public static void waitForElementToBeClickable(By locator) {
-        WebDriverWait webDriverWait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
+        WebDriverWait webDriverWait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(15));
         webDriverWait.until(ExpectedConditions.elementToBeClickable(locator));
     }
 
@@ -157,8 +152,60 @@ public class Common {
         WebElement Element = Driver.getDriver().findElement(locator);
         js.executeScript("arguments[0].scrollIntoView();", Element);
 
+    }
+
+//    public static void waitForThePageToLoadCompletely() {
+//        Driver.getDriver().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(100));
+//    }
+
+    //StaleElementReferenceException
+    public static void waitForTheElementToLoad(By locator) {
+        Wait<WebDriver> wait = new FluentWait<>(Driver.getDriver())
+                .withTimeout(Duration.ofSeconds(10))
+                .pollingEvery(Duration.ofMillis(500))
+                .ignoring(StaleElementReferenceException.class, ElementClickInterceptedException.class);
+
+        wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
+    }
+
+    public static void waitForUrlToBe(String url) {
+        WebDriverWait webDriverWait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
+        webDriverWait.until(ExpectedConditions.urlToBe(url));
 
     }
 
+    public static void doubleClickElementByAction(By locator) {
+        Actions actions = new Actions(Driver.getDriver());
+        actions.doubleClick(getElement(locator));
+        actions.perform();
+    }
 
+//    public static boolean xxx(By locator) {
+//        do {
+//            try {
+//                Common.sleep(500);
+//                Common.clickElement(locator);
+//            } catch (ElementClickInterceptedException e) {
+//                return false;
+//            } catch (StaleElementReferenceException se) {
+//                return false;
+//            } catch (ElementNotInteractableException se) {
+//                return false;
+//            }
+//            return true;
+//        } while (false);
+//    }
 }
+//
+//        do{
+//            try {
+//                triangle = getTriangleDim();
+//                bError=false;
+//            } catch (Exception e){
+//                System.out.println("You did not enter an integer, please enter an integer value");
+//                // Don't do anything else in here: we will loop back to the beginning again and get new input!
+//            }
+//        }while (bError);
+
+
+

@@ -15,16 +15,24 @@ public class LoginPage {
     }
 
     public static void clickOnNuorodos() {
-        Common.waitForElementToBePresent(Locator.Login.spanLoggedIn);
+        Common.waitForElementToBePresent(Locator.Login.spanAtsijungti);
         Common.clickElement(Locator.CommonActions.buttonNuorodos);
     }
 
     public static String readFirstLineDropdownNuorodos() {
-        Common.waitForElementToBeVisible(Locator.Login.firstLineDropdownNuorodos);
+        Common.waitForElementToBePresent(Locator.Login.firstLineDropdownNuorodos);
         return Common.getElementText(Locator.Login.firstLineDropdownNuorodos);
     }
 
     public static String readErrorMessage() {
         return Common.getElementText(Locator.Login.errorMessage);
+    }
+
+    public static void clickButtonForMoreOptions() {
+        Common.clickElement(Locator.Login.buttonCustomerMenu);
+    }
+
+    public static void clickManoPaskyra() {
+        Common.clickElement(Locator.Login.buttonManoPaskyra);
     }
 }

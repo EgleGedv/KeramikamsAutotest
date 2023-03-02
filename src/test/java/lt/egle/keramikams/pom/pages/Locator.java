@@ -12,6 +12,9 @@ public class Locator {
         public static By firstLineDropdownNuorodos = By.xpath("(//li[@class='greet welcome'])[1]");
         public static By errorMessage = By.xpath("//div[contains(text(),'Neteisingas prisijungimo vardas arba slaptažodis.')]");
         public static By spanLoggedIn = By.xpath("(//span[@class='logged-in'])[1]");
+        public static By spanAtsijungti = By.xpath("(//a[contains(text(),'Atsijungti')])[2]");
+        public static By buttonCustomerMenu = By.xpath("(//button[@class='action switch'])[1]");
+        public static By buttonManoPaskyra = By.xpath("/html/body/div[2]/header/div[1]/div[3]/div[2]/ul/li[3]/div/ul/li[1]/a");
     }
 
     public static class CommonActions {
@@ -22,7 +25,6 @@ public class Locator {
     public static class ItemSearch {
         public static By textFirstItemInList = By.xpath("//*[@id='layer-product-list']/div[2]/ol/li[1]/div/div[2]/strong/a");
         public static By textMessageNotice = By.xpath("//div[@class='message notice']");
-
     }
 
     public static class Cart {
@@ -65,12 +67,13 @@ public class Locator {
         public static By buttonBotz = By.xpath("(//a[@href='https://keramikams.lt/prekiu-katalogas/glazura-keramikai/vokiska-glazura/botz'])[4]");
         public static By sliderPriceStart = By.xpath("//a[@class='ui-slider-handle ui-state-default ui-corner-all' and @style='left: 100%;']");
         public static By buttonSideBarKaina = By.xpath("//div[contains(text(),'Kaina')]");
-        public static By buttonSideBarDengiamumas = By.xpath("//div[@attribute='glazuros_dengiamumas']");
+        public static By filterOptionDengiamumas = By.xpath("(//div[@class='filter-options-title'])[1]");
         public static By spanFilterCurrentKaina = By.xpath("//div[@class='filter-current']//span[contains(text(), 'Kaina')]");
         public static By spanFilterValueDengiamumas = By.xpath("//span[@class='filter-value' and contains(text(), 'Dengianti')]");
-        public static By checkboxDengianti = By.xpath("(//input[@type='checkbox'])[1]");
-        public static By spanFilterCurrentDengiamumas = By.xpath("//div[@class='filter-current']//span[contains(text(), 'Dengiamumas')]");;
+        public static By checkboxDengianti = By.xpath("//*[@id='narrow-by-list']/div[3]/div[2]/ol/li[1]/a");
+        public static By spanFilterCurrentDengiamumas = By.xpath("//div[@class='filter-current']//span[contains(text(), 'Dengiamumas')]");
         public static By buttonSideBarBlizgesioLygis = By.xpath("//div[@attribute='glazuros_blizgesys']");
+        public static By itemBotz9894 = By.xpath("//*[@id='layer-product-list']/div[2]/ol/li[2]/div/div[2]/strong/a");
 
         public static By checkboxDengiamumasByType(String type) {
             return By.xpath(
@@ -83,6 +86,10 @@ public class Locator {
                     String.format("//a[contains(text(), ' %s ')]", blizgesioLygis)
             );
         }
+    }
+
+    public static class MyAccount {
+        public static By paragraphKontaktineInformacija = By.xpath("(//div[@class='box-content'])[1]");
     }
 }
 
