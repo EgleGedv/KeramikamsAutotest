@@ -8,8 +8,12 @@ public class SidebarFilterPage {
         Common.clickElement(Locator.SideBarFilterPage.buttonBotz);
     }
 
-    public static void setPriceRangeFrom1Euro55ctTo3Euro55ct() {
-        Common.slideElement(Locator.SideBarFilterPage.sliderPriceStart, -160, 0);
+    public static void setPriceRangeToMax3Euro55ct() {
+        Common.setSlideElement(Locator.SideBarFilterPage.divSliderPriceMax, -160,0);
+    }
+
+    public static void setPriceRangeToMax4Euro55ct() {
+        Common.setSlideElement(Locator.SideBarFilterPage.divSliderPriceMax, -130,0);
     }
 
     public static void scrollDownToSeePriceRangeSlider() {
@@ -35,5 +39,50 @@ public class SidebarFilterPage {
             }
         }
         return true;
+    }
+
+    public static void clickOnDengiamumas() {
+        Common.waitUntilPageCompletelyLoaded(10);
+        Common.clickElement(Locator.SideBarFilterPage.buttonSidebarDengiamumas);
+
+    }
+
+    public static void selectDengianti() {
+        Common.waitUntilPageCompletelyLoaded(10);
+        Common.clickElement(Locator.SideBarFilterPage.checkboxDengianti);
+    }
+
+    public static void clickOnBlizgesioLygis() {
+        Common.waitUntilPageCompletelyLoaded(10);
+        Common.clickElement(Locator.SideBarFilterPage.buttonSidebarBlizgesioLygis);
+
+    }
+
+    public static void selectBlizgus() {
+        Common.waitUntilPageCompletelyLoaded(10);
+        Common.clickElement(Locator.SideBarFilterPage.checkboxBlizgus);
+    }
+
+    public static void clickOnGlazurosSavybes() {
+        Common.waitUntilPageCompletelyLoaded(10);
+        Common.clickElement(Locator.SideBarFilterPage.buttonSidebarGlazurosSavybes);
+    }
+
+    public static void selectRekomenduojamaIndams() {
+        Common.waitUntilPageCompletelyLoaded(10);
+        Common.clickElement(Locator.SideBarFilterPage.checkboxRekomenduojamaIndams);
+    }
+
+
+    public static void selectColour(String colour) {
+        Common.waitUntilPageCompletelyLoaded(10);
+        Common.clickElement(Locator.SideBarFilterPage.selectionByColour(colour));
+
+
+    }
+
+    public static String readNameFirstItem() {
+        Common.waitUntilPageCompletelyLoaded(10);
+        return Common.getElementText(Locator.SideBarFilterPage.firstItem);
     }
 }

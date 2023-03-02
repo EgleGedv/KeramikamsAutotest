@@ -17,7 +17,7 @@ public class ItemSearchTest extends BaseTest {
     }
 
     @Test
-    public void testPositiveUsingSearchField() {
+    public void testPositiveUsingSearchField_raudona() {
 
         String expectedResult = "ARGILA";
         String searchKeyword = "raudona";
@@ -35,7 +35,7 @@ public class ItemSearchTest extends BaseTest {
     }
 
     @Test
-    public void testNegativeUsingSearchField() {
+    public void testNegativeUsingSearchField_Rauuuu() {
 
         String expectedResult = "prekių nebuvo rasta";
         String searchKeyword = "Rauuuu";

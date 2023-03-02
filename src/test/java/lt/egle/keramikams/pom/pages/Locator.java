@@ -60,10 +60,28 @@ public class Locator {
 
     public static class SideBarFilterPage {
         public static By buttonBotz = By.xpath("(//a[@href='https://keramikams.lt/prekiu-katalogas/glazura-keramikai/vokiska-glazura/botz'])[4]");
-        public static By sliderPriceStart = By.xpath("//a[@class='ui-slider-handle ui-state-default ui-corner-all' and @style='left: 100%;']");
         public static By buttonSideBarKaina = By.xpath("//div[contains(text(),'Kaina')]");
         public static By spanCurrentFilter = By.xpath("//div[@class='filter-current']");
         public static By filteredPricesBOTZ = By.xpath("//span[@class='price-container price-final_price tax weee']");
+        public static By divSliderPriceMax = By.xpath("(//div[@id='ln_slider_price' and contains(@class,'slider')]/a)[2]");
+        public static By buttonSidebarDengiamumas = By.xpath("//div[@attribute='glazuros_dengiamumas']");
+        public static By checkboxDengianti = By.xpath("//*[@id='narrow-by-list']/div[3]/div[2]/ol/li[1]/a");
+        public static By buttonSidebarBlizgesioLygis = By.xpath("//*[@id='narrow-by-list']/div[4]/div[1]");
+        public static By checkboxBlizgus = By.xpath("//*[@id='narrow-by-list']/div[4]/div[2]/ol/li[1]/a");
+        public static By buttonSidebarGlazurosSavybes = By.xpath("//*[@id='narrow-by-list']/div[5]/div[1]");
+        public static By checkboxRekomenduojamaIndams = By.xpath("//*[@id='narrow-by-list']/div[5]/div[2]/ol/li[2]/a");
+        public static By firstItem = By.xpath("//*[@id='layer-product-list']/div[2]/ol/li/div/div[2]/strong/a");
+
+        public static By selectionByColour(String colourName) {
+            return By.xpath(
+                    String.format("//*[@option-label='%s']", colourName)
+            );
+        }
+
+
+
+
+
     }
 
     public static class MyAccount {

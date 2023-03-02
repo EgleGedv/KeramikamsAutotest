@@ -29,7 +29,7 @@ public class SidebarFilterTest extends BaseTest {
 
         SidebarFilterPage.chooseCategoryInSideBarBOTZ();
         SidebarFilterPage.scrollDownToSeePriceRangeSlider();
-        SidebarFilterPage.setPriceRangeFrom1Euro55ctTo3Euro55ct();
+        SidebarFilterPage.setPriceRangeToMax3Euro55ct();
 
         actualResult = SidebarFilterPage.readFiltruojamaPagal();
 
@@ -44,7 +44,7 @@ public class SidebarFilterTest extends BaseTest {
 
         SidebarFilterPage.chooseCategoryInSideBarBOTZ();
         SidebarFilterPage.scrollDownToSeePriceRangeSlider();
-        SidebarFilterPage.setPriceRangeFrom1Euro55ctTo3Euro55ct();
+        SidebarFilterPage.setPriceRangeToMax3Euro55ct();
 
         List<Double> pricesAfterFiltering = new ArrayList<>(SidebarFilterPage.getFilteredPrices());
 
@@ -56,5 +56,27 @@ public class SidebarFilterTest extends BaseTest {
     @Test
     public void testSideBarFilterBotzWhite9876() {
 
+        String expectedResult = "BOTZ 9876 Balta glazūra";
+        String actualResult;
+
+        SidebarFilterPage.chooseCategoryInSideBarBOTZ();
+        SidebarFilterPage.scrollDownToSeePriceRangeSlider();
+        SidebarFilterPage.setPriceRangeToMax4Euro55ct();
+
+        SidebarFilterPage.clickOnDengiamumas();
+        SidebarFilterPage.selectDengianti();
+
+        SidebarFilterPage.clickOnBlizgesioLygis();
+        SidebarFilterPage.selectBlizgus();
+
+        SidebarFilterPage.clickOnGlazurosSavybes();
+        SidebarFilterPage.selectRekomenduojamaIndams();
+
+        SidebarFilterPage.selectColour("Balta");
+
+        actualResult = SidebarFilterPage.readNameFirstItem();
+
+        Assert.assertTrue(actualResult.contains(expectedResult),
+                String.format("Actual result: %s; Expected result: %s", actualResult, expectedResult));
     }
 }
