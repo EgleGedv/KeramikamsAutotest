@@ -34,7 +34,7 @@ public class SidebarFilterTest extends BaseTest {
         actualResult = SidebarFilterPage.readFiltruojamaPagal();
 
         Assert.assertTrue(actualResult.contains(expectedResult),
-        String.format("Actual result: %s; Expected result: %s", actualResult, expectedResult));
+                String.format("Actual result: %s; Expected result: %s", actualResult, expectedResult));
     }
 
     @Test
@@ -46,11 +46,27 @@ public class SidebarFilterTest extends BaseTest {
         SidebarFilterPage.scrollDownToSeePriceRangeSlider();
         SidebarFilterPage.setPriceRangeToMax3Euro55ct();
 
-        List<Double> pricesAfterFiltering = new ArrayList<>(SidebarFilterPage.getFilteredPrices());
+        List<Double> pricesAfterFilteringMax3_55 = new ArrayList<>(SidebarFilterPage.getFilteredPricesMax3_55());
 
-        Boolean actualResult = SidebarFilterPage.areAllPricesInThePriceRangeChosen(pricesAfterFiltering);
+        Boolean actualResult = SidebarFilterPage.areAllPricesInThePriceRange1_55to3_55Euro(pricesAfterFilteringMax3_55);
 
         Assert.assertEquals(actualResult, expectedResult);
+    }
+
+    @Test
+    public void testPriceFilter_1Euro55ctTo4Euro55ct_GivesOutInCorrectItemsBOTZ() {
+
+        Boolean expectedResult = false;
+
+        SidebarFilterPage.chooseCategoryInSideBarBOTZ();
+        SidebarFilterPage.scrollDownToSeePriceRangeSlider();
+        SidebarFilterPage.setPriceRangeToMax4Euro55ct();
+
+        List<Double> pricesAfterFilteringMax4_55 = new ArrayList<>(SidebarFilterPage.getFilteredPricesMax4_55());
+
+        Boolean actualResult = SidebarFilterPage.areAllPricesInThePriceRange1_55to4_55Euro(pricesAfterFilteringMax4_55);
+
+        Assert.assertEquals(actualResult,expectedResult);
     }
 
     @Test

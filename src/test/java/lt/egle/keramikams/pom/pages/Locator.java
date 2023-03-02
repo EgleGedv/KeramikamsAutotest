@@ -62,7 +62,7 @@ public class Locator {
         public static By buttonBotz = By.xpath("(//a[@href='https://keramikams.lt/prekiu-katalogas/glazura-keramikai/vokiska-glazura/botz'])[4]");
         public static By buttonSideBarKaina = By.xpath("//div[contains(text(),'Kaina')]");
         public static By spanCurrentFilter = By.xpath("//div[@class='filter-current']");
-        public static By filteredPricesBOTZ = By.xpath("//span[@class='price-container price-final_price tax weee']");
+        public static By filteredPricesMax3_55BOTZ = By.xpath("//span[@class='price-container price-final_price tax weee']");
         public static By divSliderPriceMax = By.xpath("(//div[@id='ln_slider_price' and contains(@class,'slider')]/a)[2]");
         public static By buttonSidebarDengiamumas = By.xpath("//div[@attribute='glazuros_dengiamumas']");
         public static By checkboxDengianti = By.xpath("//*[@id='narrow-by-list']/div[3]/div[2]/ol/li[1]/a");
@@ -71,6 +71,7 @@ public class Locator {
         public static By buttonSidebarGlazurosSavybes = By.xpath("//*[@id='narrow-by-list']/div[5]/div[1]");
         public static By checkboxRekomenduojamaIndams = By.xpath("//*[@id='narrow-by-list']/div[5]/div[2]/ol/li[2]/a");
         public static By firstItem = By.xpath("//*[@id='layer-product-list']/div[2]/ol/li/div/div[2]/strong/a");
+        public static By filteredPricesMax4_55BOTZ = By.xpath("//span[@class='price-wrapper ']");
 
         public static By selectionByColour(String colourName) {
             return By.xpath(

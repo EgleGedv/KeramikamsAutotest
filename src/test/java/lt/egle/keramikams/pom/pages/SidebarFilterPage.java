@@ -24,15 +24,33 @@ public class SidebarFilterPage {
         return Common.getElementText(Locator.SideBarFilterPage.spanCurrentFilter);
     }
 
-    public static List<Double> getFilteredPrices() {
-        return Common.getListPrices(Locator.SideBarFilterPage.filteredPricesBOTZ);
+    public static List<Double> getFilteredPricesMax3_55() {
+        return Common.getListPrices(Locator.SideBarFilterPage.filteredPricesMax3_55BOTZ);
     }
 
-    public static boolean areAllPricesInThePriceRangeChosen(List<Double> list) {
+    public static List<Double> getFilteredPricesMax4_55() {
+        Common.waitUntilPageCompletelyLoaded(10);
+        return Common.getListPrices(Locator.SideBarFilterPage.filteredPricesMax4_55BOTZ);
+    }
+
+    public static boolean areAllPricesInThePriceRange1_55to3_55Euro(List<Double> list) {
         int i = 0;
         while (i < list.size()) {
             Double x = list.get(i);
             if (x >= 1.55 && x <= 3.55)
+                i++;
+            else {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public static boolean areAllPricesInThePriceRange1_55to4_55Euro(List<Double> list) {
+        int i = 0;
+        while (i < list.size()) {
+            Double x = list.get(i);
+            if (x >= 1.55 && x <= 4.55)
                 i++;
             else {
                 return false;
