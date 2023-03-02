@@ -12,7 +12,6 @@ import java.util.List;
 
 public class SortItemsTest extends BaseTest {
 
-
     @BeforeMethod
     @Override
     public void setup() {
@@ -36,7 +35,5 @@ public class SortItemsTest extends BaseTest {
         System.out.println(expectedResult);
 
         Assert.assertEquals(actualResult, expectedResult);
-
-
     }
 }

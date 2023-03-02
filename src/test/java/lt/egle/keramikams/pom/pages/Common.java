@@ -1,11 +1,14 @@
 package lt.egle.keramikams.pom.pages;
 
 import lt.egle.keramikams.pom.utils.Driver;
-import org.openqa.selenium.*;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.ElementClickInterceptedException;
-import org.openqa.selenium.StaleElementReferenceException;
-import org.openqa.selenium.support.ui.*;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.ArrayList;
@@ -43,27 +46,8 @@ public class Common {
         select.selectByValue(value);
     }
 
-    public static List<Boolean> getSelectedStatusOfAllCheckboxes(By locator) {
-        List<WebElement> elements = getElements(locator);
-        List<Boolean> elementsStatuses = new ArrayList<>();
-
-        for (WebElement element : elements) {
-            elementsStatuses.add(element.isSelected());
-        }
-        return elementsStatuses;
-    }
-
     private static List<WebElement> getElements(By locator) {
         return Driver.getDriver().findElements(locator);
-
-    }
-
-    public static String getElementAttributeOutcome(By locator, String attributeName) {
-        return getElement(locator).getAttribute(attributeName);
-    }
-
-    public static void acceptAlert() {
-        Driver.getDriver().switchTo().alert().accept();
     }
 
     public static void sleep(int millis) {
@@ -73,19 +57,6 @@ public class Common {
             e.printStackTrace();
             Thread.currentThread().interrupt();
         }
-    }
-
-    public static boolean isAlertPresent() {
-        try {
-            Driver.getDriver().switchTo().alert();
-        } catch (NoAlertPresentException e) {
-            return false;
-        }
-        return true;
-    }
-
-    public static void dismissAlert() {
-        Driver.getDriver().switchTo().alert().dismiss();
     }
 
     public static List<Double> getListPrices(By locator) {
@@ -150,61 +121,9 @@ public class Common {
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
         WebElement Element = Driver.getDriver().findElement(locator);
         js.executeScript("arguments[0].scrollIntoView();", Element);
-
     }
-
-//    public static void waitForThePageToLoadCompletely() {
-//        Driver.getDriver().manage().timeouts().pageLoadTimeout(Duration.ofSeconds(100));
-//    }
-
-    //StaleElementReferenceException
-    public static void waitForTheElementToLoad(By locator) {
-        Wait<WebDriver> wait = new FluentWait<>(Driver.getDriver())
-                .withTimeout(Duration.ofSeconds(10))
-                .pollingEvery(Duration.ofMillis(500))
-                .ignoring(StaleElementReferenceException.class, ElementClickInterceptedException.class);
-
-        wait.until(ExpectedConditions.elementToBeClickable(locator)).click();
-    }
-
-    public static void waitForUrlToBe(String url) {
-        WebDriverWait webDriverWait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
-        webDriverWait.until(ExpectedConditions.urlToBe(url));
-
-    }
-
-    public static void doubleClickElementByAction(By locator) {
-        Actions actions = new Actions(Driver.getDriver());
-        actions.doubleClick(getElement(locator));
-        actions.perform();
-    }
-
-//    public static boolean xxx(By locator) {
-//        do {
-//            try {
-//                Common.sleep(500);
-//                Common.clickElement(locator);
-//            } catch (ElementClickInterceptedException e) {
-//                return false;
-//            } catch (StaleElementReferenceException se) {
-//                return false;
-//            } catch (ElementNotInteractableException se) {
-//                return false;
-//            }
-//            return true;
-//        } while (false);
-//    }
 }
-//
-//        do{
-//            try {
-//                triangle = getTriangleDim();
-//                bError=false;
-//            } catch (Exception e){
-//                System.out.println("You did not enter an integer, please enter an integer value");
-//                // Don't do anything else in here: we will loop back to the beginning again and get new input!
-//            }
-//        }while (bError);
+
 
 
 

@@ -8,9 +8,7 @@ public class Locator {
         public static By fieldElPastas = By.xpath("//input[@name='login[username]']");
         public static By fieldSlaptazodis = By.xpath("//input[@name='login[password]']");
         public static By buttonPrisijungti = By.xpath("(//span[contains(text(),'Prisijungti')])[1]");
-        public static By firstLineDropdownNuorodos = By.xpath("(//li[@class='greet welcome'])[1]");
         public static By errorMessage = By.xpath("//div[contains(text(),'Neteisingas prisijungimo vardas arba slaptažodis.')]");
-        public static By spanLoggedIn = By.xpath("(//span[@class='logged-in'])[1]");
         public static By spanAtsijungti = By.xpath("(//a[contains(text(),'Atsijungti')])[2]");
         public static By buttonCustomerMenu = By.xpath("(//button[@class='action switch'])[1]");
         public static By buttonManoPaskyra = By.xpath("/html/body/div[2]/header/div[1]/div[3]/div[2]/ul/li[3]/div/ul/li[1]/a");
@@ -27,7 +25,6 @@ public class Locator {
     }
 
     public static class Cart {
-
         public static By buttonIKrepseliRaudonaRiebiMolioMase = By.xpath("//form[@action='https://keramikams.lt/checkout/cart/add/uenc/aHR0cHM6Ly9rZXJhbWlrYW1zLmx0L2NhdGFsb2dzZWFyY2gvcmVzdWx0Lz9xPVJhdWRvbmErcmllYmkrbW9saW8rbWFzJUM0JTk3Kw%2C%2C/product/5551/']");
         public static By fieldQuantity20Kg = By.xpath("//input[@name='super_group[2180]']");
         public static By fieldQuantity5Kg = By.xpath("//input[@name='super_group[2183]']");
@@ -39,7 +36,6 @@ public class Locator {
         public static By buttonRikiavimas = By.xpath("(//select[@id='sorter'])[1]");
         public static By arrowSetDescending = By.xpath("(//a[@title='Set Descending Direction'])[1]");
         public static By sorterPrice = By.className("price");
-        public static By spanSecondItem = By.xpath("//li[@class='item product product-item nth-child-2n']//a[@class='product-item-link' and @href='https://keramikams.lt/limozo-porceliano-mase-liejimui']");
         public static By spanThirdItem = By.xpath("(//li[@class='item product product-item nth-child-2np1 nth-child-3n']//a[@href='https://keramikams.lt/permatomas-imperatoriskasis-porcelianas-5kg-jade'])[1]");
     }
 
@@ -66,27 +62,8 @@ public class Locator {
         public static By buttonBotz = By.xpath("(//a[@href='https://keramikams.lt/prekiu-katalogas/glazura-keramikai/vokiska-glazura/botz'])[4]");
         public static By sliderPriceStart = By.xpath("//a[@class='ui-slider-handle ui-state-default ui-corner-all' and @style='left: 100%;']");
         public static By buttonSideBarKaina = By.xpath("//div[contains(text(),'Kaina')]");
-        public static By filterOptionDengiamumas = By.xpath("(//div[@class='filter-options-title'])[1]");
-        public static By spanFilterCurrentKaina = By.xpath("//div[@class='filter-current']//span[contains(text(), 'Kaina')]");
-        public static By spanFilterValueDengiamumas = By.xpath("//span[@class='filter-value' and contains(text(), 'Dengianti')]");
-        public static By checkboxDengianti = By.xpath("//*[@id='narrow-by-list']/div[3]/div[2]/ol/li[1]/a");
-        public static By spanFilterCurrentDengiamumas = By.xpath("//div[@class='filter-current']//span[contains(text(), 'Dengiamumas')]");
-        public static By buttonSideBarBlizgesioLygis = By.xpath("//div[@attribute='glazuros_blizgesys']");
-        public static By itemBotz9894 = By.xpath("//*[@id='layer-product-list']/div[2]/ol/li[2]/div/div[2]/strong/a");
         public static By spanCurrentFilter = By.xpath("//div[@class='filter-current']");
         public static By filteredPricesBOTZ = By.xpath("//span[@class='price-container price-final_price tax weee']");
-
-        public static By checkboxDengiamumasByType(String type) {
-            return By.xpath(
-                    String.format("//a[contains(text(), ' %s ')]", type)
-            );
-        }
-
-        public static By checkboxBlizgesioLygisByType(String blizgesioLygis) {
-            return By.xpath(
-                    String.format("//a[contains(text(), ' %s ')]", blizgesioLygis)
-            );
-        }
     }
 
     public static class MyAccount {

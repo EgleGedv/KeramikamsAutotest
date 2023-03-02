@@ -1,6 +1,7 @@
 package lt.egle.keramikams.pom.pages;
 
 public class CartPage {
+
     public static void open() {
         Common.openUrl("https://keramikams.lt/catalogsearch/result/?q=Raudona+riebi+molio+mas%C4%97+");
     }
@@ -31,12 +32,11 @@ public class CartPage {
     }
 
     public static void clickButtonSubmitAddToCart() {
-
         Common.clickElement(Locator.Cart.buttonIKrepseli);
     }
 
     public static String readValueNumberOfItemsInBasket(String text) {
-        Common.waitForTextToBePresentInElementLocated(Locator.Cart.numberofItemsinBasket,text);
+        Common.waitForTextToBePresentInElementLocated(Locator.Cart.numberofItemsinBasket, text);
         return Common.getElementText(Locator.Cart.numberofItemsinBasket);
     }
 }

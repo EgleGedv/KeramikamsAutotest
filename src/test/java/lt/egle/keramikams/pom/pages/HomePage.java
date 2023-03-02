@@ -1,6 +1,7 @@
 package lt.egle.keramikams.pom.pages;
 
 public class HomePage {
+
     public static void open() {
         Common.openUrl("https://keramikams.lt/");
     }
@@ -16,7 +17,6 @@ public class HomePage {
     }
 
     public static void clickOnPrisijungti() {
-
         Common.clickElement(Locator.Home.wordClickablePrisijungti);
     }
 
@@ -38,7 +38,6 @@ public class HomePage {
     public static void mouseHoverOnPrekiuKatalogas() {
         Common.mouseHoverOnElement(Locator.Home.buttonPrekiuKatalogas);
     }
-
 
     public static void selectFromPrekiuKatalogas(String category) {
         Common.clickElement(Locator.Home.inputByTitle(category));

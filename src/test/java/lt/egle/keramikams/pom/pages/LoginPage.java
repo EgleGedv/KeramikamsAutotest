@@ -19,11 +19,6 @@ public class LoginPage {
         Common.clickElement(Locator.CommonActions.buttonNuorodos);
     }
 
-    public static String readFirstLineDropdownNuorodos() {
-        Common.waitForElementToBePresent(Locator.Login.firstLineDropdownNuorodos);
-        return Common.getElementText(Locator.Login.firstLineDropdownNuorodos);
-    }
-
     public static String readErrorMessage() {
         return Common.getElementText(Locator.Login.errorMessage);
     }

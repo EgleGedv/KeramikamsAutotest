@@ -5,6 +5,7 @@
         <classes>
             <class name="lt.egle.keramikams.pom.tests.CartTest"/>
             <class name="lt.egle.keramikams.pom.tests.ItemSearchTest"/>
+            <class name="lt.egle.keramikams.pom.tests.SideBarFilterTest"/>
             <class name="lt.egle.keramikams.pom.tests.SortItemsTest"/>
         </classes>
     </test>

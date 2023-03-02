@@ -19,14 +19,12 @@ public class SortItemsPage {
     }
 
     public static void setDescendingDirection() {
-        Common.sleep(5000);
-        //Common.waitForElementToBeClickable(Locator.SortItems.spanSecondItem);
+        Common.sleep(3000);
         Common.clickElement(Locator.SortItems.arrowSetDescending);
     }
 
     public static List<Double> getPricesBeforeSorting() {
         return Common.getListPrices(Locator.SortItems.sorterPrice);
-
     }
 
     public static List<Double> getPricesAfterSorting() {
