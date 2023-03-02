@@ -110,13 +110,6 @@ public class Common {
         actions.perform();
     }
 
-    public static void slideElement(By locator, int xOffSet, int yOffSet) {
-        Actions actions = new Actions(Driver.getDriver());
-        WebElement slider = getElement(locator);
-        actions.dragAndDropBy(slider, xOffSet, yOffSet);
-        actions.perform();
-    }
-
     public static void waitUntilPageCompletelyLoaded(int seconds) {
         JavascriptExecutor j = (JavascriptExecutor) Driver.getDriver();
 

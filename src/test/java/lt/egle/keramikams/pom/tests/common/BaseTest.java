@@ -12,8 +12,8 @@ public abstract class BaseTest {
     @BeforeMethod
     public abstract void setup();
 
-//    @AfterMethod
-//    public void teardown() {
-//        Common.closeDriver();
-//    }
+    @AfterMethod
+    public void teardown() {
+        Common.closeDriver();
+    }
 }

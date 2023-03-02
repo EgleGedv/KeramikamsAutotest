@@ -62,7 +62,6 @@ public class SidebarFilterPage {
     public static void clickOnDengiamumas() {
         Common.waitUntilPageCompletelyLoaded(10);
         Common.clickElement(Locator.SideBarFilterPage.buttonSidebarDengiamumas);
-
     }
 
     public static void selectDengianti() {
@@ -71,9 +70,8 @@ public class SidebarFilterPage {
     }
 
     public static void clickOnBlizgesioLygis() {
-        Common.waitUntilPageCompletelyLoaded(10);
+        Common.waitUntilPageCompletelyLoaded(15);
         Common.clickElement(Locator.SideBarFilterPage.buttonSidebarBlizgesioLygis);
-
     }
 
     public static void selectBlizgus() {
@@ -91,12 +89,9 @@ public class SidebarFilterPage {
         Common.clickElement(Locator.SideBarFilterPage.checkboxRekomenduojamaIndams);
     }
 
-
     public static void selectColour(String colour) {
         Common.waitUntilPageCompletelyLoaded(10);
         Common.clickElement(Locator.SideBarFilterPage.selectionByColour(colour));
-
-
     }
 
     public static String readNameFirstItem() {
