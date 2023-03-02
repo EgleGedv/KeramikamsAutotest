@@ -19,7 +19,7 @@ public class SideBarFilterTest extends BaseTest {
     }
 
     @Test
-    public void testSideBarPriceFilterBotz() {
+    public void testSideBarPriceFilterLabelAppearanceBOTZ() {
 
         String expectedResult = "1,55 € - 4,55 €";
         String actualResult;

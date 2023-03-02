@@ -4,7 +4,6 @@ import org.openqa.selenium.By;
 
 public class Locator {
 
-
     public static class Login {
         public static By fieldElPastas = By.xpath("//input[@name='login[username]']");
         public static By fieldSlaptazodis = By.xpath("//input[@name='login[password]']");
