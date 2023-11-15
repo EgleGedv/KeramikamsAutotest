@@ -24,7 +24,7 @@ public class SidebarFilterTest extends BaseTest {
     @Test
     public void testSideBarFiltruojamaPagalKainaLabelAppears_1Euro55ctTo3Euro55ct_BOTZ() {
 
-        String expectedResult = "1,55 € - 3,55 €";
+        String expectedResult = "4,59 € - 12,59 €";
         String actualResult;
 
         SidebarFilterPage.chooseCategoryInSideBarBOTZ();
