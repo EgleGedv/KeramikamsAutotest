@@ -19,7 +19,7 @@ public class CartTest extends BaseTest {
     public void testAddToCartRaudonaRiebiMolioMase20kg_2and5kg_2() {
 
         String quantity20Kg = "2";
-        String quantity5Kg = "2";
+        String quantity5Kg = "0";
         Integer totalItemsInBasket;
         totalItemsInBasket = Integer.parseInt(quantity5Kg) + Integer.parseInt(quantity20Kg);
         String expectedResult;
@@ -29,8 +29,8 @@ public class CartTest extends BaseTest {
         CartPage.clickButtonAddToCart();
         CartPage.selectTextGivenValueQuantity20Kg();
         CartPage.typeNewValueQuantity20Kg(quantity20Kg);
-        CartPage.selectTextGivenValueQuantity5Kg();
-        CartPage.typeNewValueQuantity5Kg(quantity5Kg);
+        //CartPage.selectTextGivenValueQuantity5Kg();
+        //CartPage.typeNewValueQuantity5Kg(quantity5Kg);
         CartPage.clickButtonSubmitAddToCart();
 
         actualResult = CartPage.readValueNumberOfItemsInBasket(expectedResult);

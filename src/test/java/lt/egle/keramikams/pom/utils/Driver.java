@@ -14,7 +14,9 @@ public class Driver {
 
     public static void setDriver() {
 
-        WebDriverManager.chromedriver().setup();
+        // WebDriverManager.chromedriver().setup();
+        WebDriverManager.chromedriver().clearDriverCache().setup();
+        // WebDriverManager.chromedriver().clearResolutionCache().setup();
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
         chromeOptions.addArguments("--start-maximized");
